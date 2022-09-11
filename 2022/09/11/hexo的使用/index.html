@@ -32,19 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>hexo的使用 - 橙子草草的博客</title>
+  <title>hexo的使用及博客的备份 - 橙子草草的博客</title>
   <meta name="keywords" content="hexo,null">
   <meta desc name="description" content="这是一个描述 - Chinzicam - 橙子草草的博客">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo的使用">
+<meta property="og:title" content="hexo的使用及博客的备份">
 <meta property="og:url" content="http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="橙子草草的博客">
-<meta property="og:description" content="生成新文章  hexo new “文章名”  英文标点符号  会生成再sourse&#x2F;_posts之下    本地预览命令    hexo s   上传命令  hexo g hexo d  这两个命令执行后，网页会自动刷新 或者直接 hexo g -d">
+<meta property="og:description" content="常用命令 生成新文章   hexo new “文章名”     英文标点符号  会生成再sourse&#x2F;_posts之下    本地预览命令    hexo s   上传命令  hexo g hexo d  这两个命令执行后，网页会自动刷新 或者直接 hexo g -d     博客的迁移建立分支hexo 在本地目录下（位置任意）右键Git bash here，执行以下指令，把heimu2">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-09-11T04:36:37.000Z">
-<meta property="article:modified_time" content="2022-09-11T07:24:36.488Z">
+<meta property="article:modified_time" content="2022-09-11T10:46:54.740Z">
 <meta property="article:author" content="Chinzicam">
 <meta property="article:tag" content="hexo">
 <meta name="twitter:card" content="summary">
@@ -1628,7 +1628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1662893255749),
+    lastupdate: new Date(1662893443627),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2401,7 +2401,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        hexo的使用
+        hexo的使用及博客的备份
       </h1>
       <div class='new-meta-box'>
         
@@ -2458,15 +2458,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <ul>
-<li><p>生成新文章</p>
+    <h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><ul>
+<li>生成新文章</li>
+</ul>
 <blockquote>
-<p>hexo new “文章名”  英文标点符号</p>
+<p>hexo new “文章名”     英文标点符号</p>
 <ul>
 <li>会生成再sourse&#x2F;_posts之下</li>
 </ul>
 </blockquote>
-</li>
+<ul>
 <li><p>本地预览命令  </p>
 <blockquote>
 <p>hexo s</p>
@@ -2483,6 +2484,61 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </blockquote>
 </li>
 </ul>
+<h3 id="博客的迁移"><a href="#博客的迁移" class="headerlink" title="博客的迁移"></a>博客的迁移</h3><h5 id="建立分支hexo"><a href="#建立分支hexo" class="headerlink" title="建立分支hexo"></a>建立分支hexo</h5><ul>
+<li>在本地目录下（位置任意）右键Git bash here，执行以下指令，把heimu24.github.io项目文件克隆到本地：</li>
+</ul>
+<blockquote>
+<p> git clone <a target="_blank" rel="noopener" href="https://github.com/Chinzicam/Chinzicam.github.io.git">https://github.com/Chinzicam/Chinzicam.github.io.git</a></p>
+</blockquote>
+<ul>
+<li>进入Chinzicam.github.io.git，删除文件夹里除了.git的其他所有文件</li>
+<li>把你的blog文件夹内的所有文件全部复制到Chinzicam.github.io.git&#x2F;下</li>
+<li>里面应该有个叫.gitignore的文件，没有的话就自己创建一个<br> <img src="https://pic.imgdb.cn/item/631db41016f2c2beb1303521.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/631db41016f2c2beb1303521.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=".gitignore"></li>
+</ul>
+<p>-创建一个叫hexo（或者blog，名字随意）的分支，并切换到这个分支</p>
+<blockquote>
+<p>git checkout -b hexo</p>
+</blockquote>
+<ul>
+<li>添加所有文件到暂存区,并进行提交<blockquote>
+<p>git add .<br>git commit -m “”</p>
+</blockquote>
+</li>
+<li>推送hexo分支的文件到github仓库<blockquote>
+<p>git push –set-upstream origin hexo</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>至此成功搞定</strong></p>
+<h4 id="发表博客，更新博客"><a href="#发表博客，更新博客" class="headerlink" title="发表博客，更新博客"></a>发表博客，更新博客</h4><ul>
+<li>把你写好的博客.md文件放到Chinzicam.github.io\source_posts中</li>
+<li>然后执行指令，然后就可以去网站查看效果了。<blockquote>
+<p>ps：如果要删除文章，直接本地删除，然后再次执行以下两句指令就行了。<br>如果不行就先执行一下 hexo clean，再执行下面语句 </p>
+</blockquote>
+<ul>
+<li>hexo g #生成</li>
+<li>hexo d #部署</li>
+</ul>
+</li>
+<li>博客发表了，你的网站更新了（是因为chinzicam.github.io的master下的文件更新了）,接下来我们备份的blog也应该要更新啊</li>
+<li>执行以下指令(git 提交三部曲)<blockquote>
+<ul>
+<li>git add . #添加所有文件到暂存区</li>
+<li>git commit -m “提交一篇博客”  #提交</li>
+<li>git push origin hexo 推送hexo分支到github</li>
+</ul>
+</blockquote>
+</li>
+<li>注意，以上所有的步骤都已经执行过本地关联远程仓库操作了。</li>
+<li>最后<blockquote>
+<p>git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;">&#103;&#x69;&#x74;&#x40;&#x67;&#105;&#x74;&#104;&#x75;&#x62;&#x2e;&#x63;&#111;&#109;</a>:Chinzicam&#x2F;chinzicam.github.io.git</p>
+<ul>
+<li>-b就是branch分支的意思，hexo就是hexo分支，后面的地址就是你自己的repository地址</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><strong>新建博客hexo new post “你好，hexo” ，然后去source_posts 编辑文章，以后每次写完博客，通过hexo g，hexo d发布博客，</strong><br><strong>然后通过git三部曲git add . ; git commit -m “注释” ; git push origin hexo</strong><br><strong>更新备份github的hexo分支即可</strong></p>
 
   </div>
   
@@ -2507,7 +2563,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-11T15:24:36+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-11T18:46:54+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Sep 11, 2022</p>
@@ -2533,7 +2589,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/&title=hexo的使用 - 橙子草草的博客&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/&title=hexo的使用及博客的备份 - 橙子草草的博客&summary="
           
           >
           
@@ -2545,7 +2601,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/&title=hexo的使用 - 橙子草草的博客&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/&title=hexo的使用及博客的备份 - 橙子草草的博客&summary="
           
           >
           
@@ -2557,7 +2613,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/&title=hexo的使用 - 橙子草草的博客&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/&title=hexo的使用及博客的备份 - 橙子草草的博客&summary="
           
           >
           
@@ -2649,9 +2705,19 @@ git commit -m”这里写注释”  将全部文件添加到本地仓库
   
 
 
-  <div class="">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">常用命令</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%BF%81%E7%A7%BB"><span class="toc-text">博客的迁移</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E5%88%86%E6%94%AFhexo"><span class="toc-text">建立分支hexo</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%91%E8%A1%A8%E5%8D%9A%E5%AE%A2%EF%BC%8C%E6%9B%B4%E6%96%B0%E5%8D%9A%E5%AE%A2"><span class="toc-text">发表博客，更新博客</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -3681,7 +3747,7 @@ git commit -m”这里写注释”  将全部文件添加到本地仓库
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是一个描述"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"橙子草草的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/09/11/hexo的使用/","name":"hexo的使用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"橙子草草的博客","url":"http://example.com/","keywords":null,"description":"这是一个描述","author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是一个描述"},"publisher":{"@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hexo的使用","description":"这是一个描述","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/"},"author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"橙子草草的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/","wordCount":0,"datePublished":"2022-09-11T04:36:37.000Z","dateModified":"2022-09-11T07:24:36.488Z","articleSection":"学习笔记","keywords":"hexo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是一个描述"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"橙子草草的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/09/11/hexo的使用/","name":"hexo的使用及博客的备份"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"橙子草草的博客","url":"http://example.com/","keywords":null,"description":"这是一个描述","author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是一个描述"},"publisher":{"@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"hexo的使用及博客的备份","description":"这是一个描述","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/"},"author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"橙子草草的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/","wordCount":0,"datePublished":"2022-09-11T04:36:37.000Z","dateModified":"2022-09-11T10:46:54.740Z","articleSection":"学习笔记","keywords":"hexo","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
