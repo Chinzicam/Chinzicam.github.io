@@ -1,5 +1,5 @@
 ---
-title: hexo的使用及博客的备份
+title: hexo的基本使用及博客的备份迁移
 author: 橙子草草
 date: 2022-09-11 12:36:37
 tags:
@@ -53,7 +53,7 @@ category:
 > 如果不行就先执行一下 hexo clean，再执行下面语句 
 	- hexo g #生成
 	-  hexo d #部署 
-- 博客发表了，你的网站更新了（是因为chinzicam.github.io的master下的文件更新了）,接下来我们备份的blog也应该要更新啊
+- 博客发表了，你的网站更新了（是因为chinzicam.github.io的master下的文件更新了）,接下来我们备份的blog也应该要更新
 - 执行以下指令(git 提交三部曲)
 > - git add . #添加所有文件到暂存区
 > - git commit -m "提交一篇博客"  #提交
@@ -64,7 +64,12 @@ category:
 > - -b就是branch分支的意思，hexo就是hexo分支，后面的地址就是你自己的repository地址
 
 #### 总结
-**新建博客hexo new post "你好，hexo" ，然后去source\_posts 编辑文章，以后每次写完博客，通过hexo g，hexo d发布博客，**
+**新建博客hexo new post "你好，hexo" ，然后去source\\_posts 编辑文章，以后每次写完博客，通过hexo g -d 发布博客，**
+
 **然后通过git三部曲git add . ; git commit -m "注释" ; git push origin hexo**
 **更新备份github的hexo分支即可**
+
+![目录结构](https://pic.imgdb.cn/item/631dd63016f2c2beb151e5d7.jpg)
+
+![](https://pic.imgdb.cn/item/631dd63616f2c2beb151ede1.jpg)
 

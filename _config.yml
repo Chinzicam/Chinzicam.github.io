@@ -107,5 +107,5 @@ deploy:
   branch: main
 
 # 网站图标，更多尺寸等图标请使用 import 方式批量导入
-favicon: https://pic.imgdb.cn/item/631d880116f2c2beb1012b93.jpg
+favicon: https://pic.imgdb.cn/item/631dd4e516f2c2beb15080ef.jpg
 
