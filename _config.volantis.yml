@@ -13,9 +13,6 @@ navbar:
     - name: 分类
       icon: fa-solid fa-folder-open
       url: categories/
-    - name: 标签
-      icon: fa-solid fa-tags
-      url: tags/
     - name: 归档
       icon: fa-solid fa-archive
       url: archives/
@@ -25,6 +22,22 @@ navbar:
     - name: 关于
       icon: fa-solid fa-info-circle
       url: about/
+    - name: 更多
+      icon: fa-solid fa-ellipsis-v
+      rows:
+        - name: 主题源码
+          url: https://github.com/volantis-x/hexo-theme-volantis/
+        - name: 更新日志
+          url: https://github.com/volantis-x/hexo-theme-volantis/releases/
+        - name: hr
+        - name: 有疑问？
+          rows:
+            - name: 看 FAQ
+              url: faqs/
+            - name: 看 本站源码
+              url: https://github.com/volantis-x/volantis-docs/
+            - name: 提 Issue
+              url: https://github.com/volantis-x/hexo-theme-volantis/issues/
   search: Search...   # Search bar placeholder
 ############################### Navigation Bar ############################### > end
 
@@ -64,7 +77,7 @@ cover:
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: '橙子草草的博客'
-  subtitle: '活到老学到老'
+  subtitle: '活到老,学到老'
   search: 搜一下 # search bar placeholder
   features:
     - name: 主页
@@ -150,14 +163,6 @@ sidebar:
       start_color: '#999'
       end_color: '#555'
     # ---------------------------------------
-    # qrcode widget
-    qrcode:
-      class: qrcode
-      display: [desktop, mobile] # [desktop, mobile]
-      height: 64px  # Automatic height if not set
-      images:
-        - volantis-static/media/org.volantis/blog/qrcode/github@volantis.png # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
-        - volantis-static/media/org.volantis/blog/qrcode/github@volantis.png # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/qrcode/github@volantis.png
     # ---------------------------------------
     # webinfo widget
     webinfo:
@@ -172,12 +177,12 @@ sidebar:
           text: '文章数目：'
           unit: '篇'
         runtime:
-          enable: false
+          enable: true
           data: '2022/09/10'    # 填写建站日期
           text: '已运行时间：'
           unit: '天'
         wordcount:
-          enable: false
+          enable: true
           text: '本站总字数：'   # 需要启用 wordcount
           unit: '字'
         visitcounter:
@@ -263,8 +268,15 @@ plugins:
     list_max_height: 320px # list max height
     list_folded: true
     autoHide: true    # hide automaticaly
+#######暗黑模式
 
-    #################################
+  # 暗黑模式 darkmode
+  # 开关按钮：在 navbar.menu 中添加：
+  # - name: 暗黑模式 # 可自定义
+  #   icon: fas fa-moon # 可自定义
+  #   toggle: darkmode
+  darkmode:
+    enable: true
 
 
 ### 自定义右键 新

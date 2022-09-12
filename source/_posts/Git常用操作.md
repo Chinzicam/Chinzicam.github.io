@@ -6,6 +6,12 @@ tags:
 - Git
 categories: 
 - 学习笔记
+music:
+ server: netease   # netease, tencent, kugou, xiami, baidu
+ type: song        # song, playlist, album, search, artist
+ id: 16846091      # song id / playlist id / album id / search keyword
+cover: true
+sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部件
 ---
 
 ### 基础命令
