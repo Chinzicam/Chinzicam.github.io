@@ -44,7 +44,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-09-11T02:40:40.000Z">
-<meta property="article:modified_time" content="2022-09-12T13:40:32.920Z">
+<meta property="article:modified_time" content="2022-09-12T15:09:20.663Z">
 <meta property="article:author" content="Chinzicam">
 <meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
@@ -1791,7 +1791,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1662990463291),
+    lastupdate: new Date(1663064577737),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2717,7 +2717,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='top'>
     
     
-      <p class="title">橙子草草的博客</p>
+      <p class="title">橙子草草</p>
     
     
       <p class="subtitle">活到老,学到老</p>
@@ -2907,17 +2907,38 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <p>不能删除当前分支，只能删除其他分支<br>git branch -d b1 删除分支时，需要做各种检查<br>git branch -D b1 不做任何检查，强制删除</p>
 </blockquote>
 </li>
-<li><p>取别名</p>
+<li><p>远程仓库添加</p>
+<blockquote>
+<p>git remote add origin <a href="mailto:&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#x40;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a>:Chinzicam&#x2F;chinzicam.github.io.git</p>
+</blockquote>
+</li>
+<li><p>查看对接好的远程仓库</p>
+<blockquote>
+<p>git remote</p>
+</blockquote>
+</li>
+<li><p>推送到远程仓库</p>
+<blockquote>
+<p>git push origin master<br>本地分支名master和远程分支名master同名，所以省略了远程分支名，完整的指令如下：</p>
+<ul>
+<li>git push origin master:master</li>
+</ul>
+</blockquote>
 </li>
 </ul>
-<p>#用于输出git提交日志</p>
+<h4 id="取别名"><a href="#取别名" class="headerlink" title="取别名"></a>取别名</h4><ul>
+<li><p>用于输出git提交日志</p>
 <blockquote>
 <p>alias git-log&#x3D;’git log –pretty&#x3D;oneline –all –graph –abbrev-commit’</p>
 </blockquote>
-<p>#用于输出当前目录所有文件及基本信息</p>
+</li>
+<li></li>
+<li><p>用于输出当前目录所有文件及基本信息</p>
 <blockquote>
 <p>alias ll&#x3D;’ls -al’</p>
 </blockquote>
+</li>
+</ul>
 
   </div>
   
@@ -2942,7 +2963,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-12T21:40:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-12T23:09:20+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：Sep 12, 2022</p>
@@ -3204,7 +3225,7 @@ hexo...</p>
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-text">基础命令</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4"><span class="toc-text">基础命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%96%E5%88%AB%E5%90%8D"><span class="toc-text">取别名</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -4344,7 +4365,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是一个描述"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"橙子草草的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/09/11/Git常用操作/","name":"Git常用操作"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"橙子草草的博客","url":"http://example.com/","keywords":null,"description":"这是一个描述","author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是一个描述"},"publisher":{"@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Git常用操作","description":"这是一个描述","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/09/11/Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"},"author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"橙子草草的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/09/11/Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/","wordCount":0,"datePublished":"2022-09-11T02:40:40.000Z","dateModified":"2022-09-12T13:40:32.920Z","articleSection":"学习笔记","keywords":"Git","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是一个描述"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"橙子草草的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/09/11/Git常用操作/","name":"Git常用操作"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"橙子草草的博客","url":"http://example.com/","keywords":null,"description":"这是一个描述","author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是一个描述"},"publisher":{"@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Git常用操作","description":"这是一个描述","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/09/11/Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"},"author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"橙子草草的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/09/11/Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/","wordCount":0,"datePublished":"2022-09-11T02:40:40.000Z","dateModified":"2022-09-12T15:09:20.663Z","articleSection":"学习笔记","keywords":"Git","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
