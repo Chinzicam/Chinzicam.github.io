@@ -15,6 +15,7 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 ---
 
 ## 常用命令
+
 - 生成新文章
 
 >hexo new "文章名"     英文标点符号
@@ -31,8 +32,10 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 >
 > - 这两个命令执行后，网页会自动刷新
 > - 或者直接 hexo g -d
+- 生成新文章
+> hexo new "文章名"
 ## 博客的迁移
-#### 建立分支hexo
+### 建立分支hexo
 
 - 在本地目录下（位置任意）右键Git bash here，执行以下指令，把heimu24.github.io项目文件克隆到本地：
 
@@ -53,6 +56,8 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 
 **至此成功搞定**
 
+---
+
 ### 发表博客，更新博客
 - 把你写好的博客.md文件放到Chinzicam.github.io\source\_posts中
 - 然后执行指令，然后就可以去网站查看效果了。
@@ -70,6 +75,7 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 - 最后
 > git remote add origin git@github.com:Chinzicam/chinzicam.github.io.git
 > - -b就是branch分支的意思，hexo就是hexo分支，后面的地址就是你自己的repository地址
+---
 
 ### 总结
 **新建博客hexo new post "你好，hexo" ，然后去source\\_posts 编辑文章，以后每次写完博客**

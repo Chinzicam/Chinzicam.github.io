@@ -55,7 +55,7 @@ site_footer:
       url: https://github.com/Chinzicam
   source: https://github.com/volantis-x/volantis-docs/
   # analytics using leancloud
-  analytics: >
+  analytics: 
     <span id="lc-sv">本站总访问量为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 次</span>
     <span id="lc-uv">访客数为 <span id='number'><i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i></span> 人</span>
   copyright: '[Copyright © 2017-2022 XXX](/)'
@@ -75,8 +75,8 @@ cover:
     others: false # can be written in front-matter 'cover: true'
   background: https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a
   # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
-  logo: # https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
-  title: '橙子草草的博客'
+  logo: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
+  title: '橙子草草'
   subtitle: '活到老,学到老'
   search: 搜一下 # search bar placeholder
   features:
@@ -106,7 +106,7 @@ sidebar:
     # blogger info widget
     blogger:
       class: blogger
-      display: [desktop, mobile] # [desktop, mobile]
+      display: [desktop] # [desktop, mobile]
       avatar: https://pic.imgdb.cn/item/631d7d2f16f2c2beb1f59108.jpg # https://gcore.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png
       shape: rectangle # circle, rectangle
       url: /about/

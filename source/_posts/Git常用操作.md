@@ -47,9 +47,19 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 git branch -d b1 删除分支时，需要做各种检查
 git branch -D b1 不做任何检查，强制删除
 
-- 取别名
-#用于输出git提交日志
+- 远程仓库添加
+> git remote add origin git@github.com:Chinzicam/chinzicam.github.io.git
+- 查看对接好的远程仓库
+> git remote
+- 推送到远程仓库
+> git push origin master
+> 本地分支名master和远程分支名master同名，所以省略了远程分支名，完整的指令如下：
+> - git push origin master:master
+
+#### 取别名
+- 用于输出git提交日志
 > alias git-log='git log --pretty=oneline --all --graph --abbrev-commit'
 
-#用于输出当前目录所有文件及基本信息
+- 
+- 用于输出当前目录所有文件及基本信息
 > alias ll='ls -al'
