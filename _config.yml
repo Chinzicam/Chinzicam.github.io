@@ -6,10 +6,11 @@
 title: 橙子草草的博客
 subtitle: ''
 description: '这是一个描述'
-keywords:
+keywords: 橙子草草,chinzicam,Chinzicam
 author: Chinzicam
-language: en
+language: zh-CN
 timezone: ''
+email: a3189797316@163.com
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -106,6 +107,26 @@ deploy:
   repository: https://github.com/Chinzicam/Chinzicam.github.io.git
   branch: main
 
+plugins:
+- hexo-reference
+
 # 网站图标，更多尺寸等图标请使用 import 方式批量导入
 favicon: https://pic.imgdb.cn/item/631dd4e516f2c2beb15080ef.jpg
 
+# Live2D
+## https://github.com/EYHN/hexo-helper-live2d
+live2d:
+  enable: true #开关插件版看板娘
+  scriptFrom: local # 默认
+  # scriptFrom: https://cdn.cbd.int/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url
+  tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
+  debug: false # 调试, 是否在控制台输出日志
+  model:
+    use: live2d-widget-model-koharu # npm-module package name
+    # use: https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json # 你的自定义 url
+  display:
+    position: left #控制看板娘位置
+    width: 150 #控制看板娘大小
+    height: 300 #控制看板娘大小
+  mobile:
+    show: false # 手机中是否展示
