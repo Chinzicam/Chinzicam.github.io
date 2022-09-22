@@ -41,7 +41,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -130,3 +130,5 @@ live2d:
     height: 300 #控制看板娘大小
   mobile:
     show: false # 手机中是否展示
+
+

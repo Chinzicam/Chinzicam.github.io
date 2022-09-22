@@ -25,10 +25,10 @@ navbar:
     - name: 更多
       icon: fa-solid fa-ellipsis-v
       rows:
-        - name: 主题源码
-          url: https://github.com/volantis-x/hexo-theme-volantis/
-        - name: 更新日志
-          url: https://github.com/volantis-x/hexo-theme-volantis/releases/
+        - name: 我的b站
+          url: https://space.bilibili.com/243862653
+        - name: 我的Github
+          url: https://space.bilibili.com/243862653
         - name: hr
         - name: 有疑问？
           rows:
@@ -48,7 +48,7 @@ site_footer:
   layout: [aplayer, social, license, info, copyright]
   social:
     - icon: fa-brands fa-bilibili
-      url: https://space.bilibili.com/243862653
+      url: https://space.bilibili.com/243862653/
     - icon: fas fa-envelope
       url: mailto:a3189797316@qq.com
     - icon: fab fa-github
@@ -165,39 +165,39 @@ sidebar:
     # ---------------------------------------
     # ---------------------------------------
     # webinfo widget
-    webinfo:
-      class: webinfo
-      display: [desktop]
-      header:
-        icon: fa-solid fa-award
-        title: 站点信息
-      type:
-        article:
-          enable: true
-          text: '文章数目：'
-          unit: '篇'
-        runtime:
-          enable: true
-          data: '2022/09/10'    # 填写建站日期
-          text: '已运行时间：'
-          unit: '天'
-        wordcount:
-          enable: true
-          text: '本站总字数：'   # 需要启用 wordcount
-          unit: '字'
-        visitcounter:
-          enable: true
-          siteuv:
-            text: '本站访客数：'
-            unit: '人'
-          sitepv:
-            text: '本站总访问量：'
-            unit: '次'
-        lastupd:
-          enable: true
-          friendlyShow: true    # 更友好的时间显示
-          text: '最后活动时间：'
-          unit: '日'
+    # webinfo:
+    #   class: webinfo
+    #   display: [desktop]
+    #   header:
+    #     icon: fa-solid fa-award
+    #     title: 站点信息
+    #   type:
+    #     article:
+    #       enable: true
+    #       text: '文章数目：'
+    #       unit: '篇'
+    #     runtime:
+    #       enable: true
+    #       data: '2022/09/10'    # 填写建站日期
+    #       text: '已运行时间：'
+    #       unit: '天'
+    #     wordcount:
+    #       enable: true
+    #       text: '本站总字数：'   # 需要启用 wordcount
+    #       unit: '字'
+    #     visitcounter:
+    #       enable: true
+    #       siteuv:
+    #         text: '本站访客数：'
+    #         unit: '人'
+    #       sitepv:
+    #         text: '本站总访问量：'
+    #         unit: '次'
+    #     lastupd:
+    #       enable: true
+    #       friendlyShow: true    # 更友好的时间显示
+    #       text: '最后活动时间：'
+    #       unit: '日'
     # ---------------------------------------
     # lastupdate widget
     lastupdate:
@@ -262,12 +262,17 @@ plugins:
     fixed: true      # enable fixed mode
     theme: '#1BCDFC'  # main color
     autoplay: true   # audio autoplay
-    order: list       # player play order, values: 'list', 'random'
+    order: random       # player play order, values: 'list', 'random'
     loop: all         # player loop play, values: 'all', 'one', 'none'
     volume: 0.7       # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
     list_max_height: 320px # list max height
     list_folded: true
     autoHide: true    # hide automaticaly
+
+    # npm i hexo-wordcount
+    # 文章字数统计、阅读时长，开启需要安装插件: npm i --save hexo-wordcount
+  wordcount:
+    enable: true
 #######暗黑模式
 
   # 暗黑模式 darkmode
@@ -527,10 +532,16 @@ color_scheme:
         - id: telegram
           img: volantis-static/media/org.volantis/logo/128/telegram.png #  https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/logo/128/telegram.png
 #############
-#
-#
-#
-#
+    # 文章布局
+    article:
+      # 文章详情页面的文章卡片本体布局方案
+      body:
+        # 文章顶部信息
+        # 从 meta_library 中取
+        top_meta: [author,date,updated, wordcount, tags]
+        # 文章底部信息
+        # 从 meta_library 中取
+        bottom_meta: [author,date,updated, wordcount, tags]
 ############################### Plugins ############################### > start
   ################ required plugins ################
   # jquery
@@ -563,6 +574,7 @@ color_scheme:
     enable: true
   contributorsjs:
     enable: true
+######## Plugins for SEO:
 
   ######## Plugins to improve loading speed:
   # 预加载
@@ -619,10 +631,7 @@ color_scheme:
     interval: 20 # ms
     scale: 1 # 0.1~1
 
-  ######## Plugins for SEO:
-  # npm i hexo-wordcount
-  wordcount:
-    enable: true
+
 
   ######## Plugins for ...
   # Button Ripple Effect
@@ -671,4 +680,3 @@ color_scheme:
       - volantis-static/media/wallpaper/minimalist/2020/052.webp
       - volantis-static/media/wallpaper/minimalist/2020/054.webp
       - volantis-static/media/wallpaper/minimalist/2020/056.webp
-
