@@ -269,10 +269,7 @@ plugins:
     list_folded: true
     autoHide: true    # hide automaticaly
 
-    # npm i hexo-wordcount
-    # 文章字数统计、阅读时长，开启需要安装插件: npm i --save hexo-wordcount
-  wordcount:
-    enable: true
+
 #######暗黑模式
 
   # 暗黑模式 darkmode
@@ -680,3 +677,7 @@ color_scheme:
       - volantis-static/media/wallpaper/minimalist/2020/052.webp
       - volantis-static/media/wallpaper/minimalist/2020/054.webp
       - volantis-static/media/wallpaper/minimalist/2020/056.webp
+# npm i hexo-wordcount
+# 文章字数统计、阅读时长，开启需要安装插件: npm i --save hexo-wordcount
+  wordcount:
+    enable: true
