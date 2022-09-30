@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="http://example.com/"/>
+  
+  <link rel="canonical" href="http://example.com/2022/09/27/oracle建表和基本操作实验/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,22 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="橙子草草的博客" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>橙子草草的博客</title>
-  <meta name="keywords" content="橙子草草,chinzicam,Chinzicam">
+  <title>oracle建表和基本操作 - 橙子草草的博客</title>
+  <meta name="keywords" content="Oracle,sql,橙子草草,chinzicam,Chinzicam">
   <meta desc name="description" content="这是一个描述 - Chinzicam - 橙子草草的博客">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="橙子草草的博客">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="oracle建表和基本操作">
+<meta property="og:url" content="http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/index.html">
 <meta property="og:site_name" content="橙子草草的博客">
-<meta property="og:description" content="这是一个描述">
+<meta property="og:description" content="数据库基本操作1. Oracle基本命令以管理员身份登录sql 1sqlpuls &#x2F;nolog  连接数据库 1conn &#x2F; as sysdba  创建用户user6374 ，密码user6374    1create user  user6374 identified by user6374   查询数据字典 12select user_name from dba_tablesdesc dba_">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-09-27T05:20:40.000Z">
+<meta property="article:modified_time" content="2022-09-30T03:15:21.674Z">
 <meta property="article:author" content="Chinzicam">
-<meta property="article:tag" content="橙子草草,chinzicam,Chinzicam">
+<meta property="article:tag" content="Oracle">
+<meta property="article:tag" content="sql">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
   <style>
@@ -2215,7 +2218,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2708,7 +2711,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="full" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a"></div>
 
@@ -2757,7 +2760,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-        <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
     
   
@@ -2767,35 +2770,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/27/oracle建表和基本操作实验/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="橙子草草的博客">
@@ -2805,326 +2780,286 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="这是一个描述">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        oracle建表和基本操作
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://space.bilibili.com/243862653" rel="nofollow noopener">
+    <img itemprop="image" src="https://pic.imgdb.cn/item/631d7d2f16f2c2beb1f59108.jpg" class="lazyload" data-srcset="https://pic.imgdb.cn/item/631d7d2f16f2c2beb1f59108.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">橙子草草</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-09-27T13:20:40+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年9月27日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/hint.css/2.4.1/hint.min.css"><h3 id="数据库基本操作"><a href="#数据库基本操作" class="headerlink" title="数据库基本操作"></a>数据库基本操作</h3><h4 id="1-Oracle基本命令"><a href="#1-Oracle基本命令" class="headerlink" title="1. Oracle基本命令"></a>1. Oracle基本命令</h4><p>以管理员身份登录sql</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sqlpuls <span class="operator">/</span>nolog</span><br></pre></td></tr></table></figure>
+
+<p>连接数据库</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn <span class="operator">/</span> <span class="keyword">as</span> sysdba</span><br></pre></td></tr></table></figure>
+
+<p>创建用户user6374 ，密码user6374   </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span>  user6374 identified <span class="keyword">by</span> user6374 </span><br></pre></td></tr></table></figure>
+
+<p>查询数据字典</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> user_name <span class="keyword">from</span> dba_tables</span><br><span class="line"><span class="keyword">desc</span> dba_users</span><br></pre></td></tr></table></figure>
+
+<p>查询user6374 </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> username  <span class="keyword">from</span> dba_users</span><br></pre></td></tr></table></figure>
+<p>给user0923授权,赋予connect,resource 两个角色</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">connect</span>,resource <span class="keyword">to</span> user6374 </span><br></pre></td></tr></table></figure>
+<p>以user6374帐号登陆</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conn user6374<span class="operator">/</span>user6374   </span><br></pre></td></tr></table></figure>
+<p>展示用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">user</span></span><br></pre></td></tr></table></figure>
+<p>建表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> tbl_student(</span><br><span class="line">	 stu_id <span class="type">int</span> <span class="keyword">primary</span> key,</span><br><span class="line"> stu_name varchar2(<span class="number">30</span>) <span class="keyword">not</span> <span class="keyword">null</span>,</span><br><span class="line"> stu_sex <span class="type">char</span>(<span class="number">1</span>) <span class="keyword">default</span> <span class="string">&#x27;m&#x27;</span>,</span><br><span class="line"> stu_birth <span class="type">date</span> <span class="keyword">not</span> <span class="keyword">null</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>查看表结构</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> tbl_student</span><br></pre></td></tr></table></figure>
+<p>查看用户创建的表的信息的数据字典</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> user_tables</span><br></pre></td></tr></table></figure>
+<p>查看user_tables 确认表的存在</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> table_name <span class="keyword">from</span> user_tables</span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> user_tables</span><br></pre></td></tr></table></figure>
+
+<p>查看user_constraints确认约束的存在</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> user_constraints <span class="operator">/</span><span class="operator">/</span>约束表</span><br><span class="line"><span class="keyword">select</span> owner table_name,constraint_name.constraint_type <span class="keyword">from</span> user_constraints<span class="operator">/</span><span class="operator">/</span>查询本表约束</span><br><span class="line"><span class="keyword">select</span> <span class="built_in">count</span>(<span class="operator">*</span>) <span class="keyword">from</span> user_constraints<span class="operator">/</span><span class="operator">/</span>查询约束条数</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li>增删改查实践</li>
+</ul>
+<p>创建一个序列</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> sequence seq_stu_id</span><br></pre></td></tr></table></figure>
+
+<p> 显示用户序列表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">desc</span> user_sequences</span><br></pre></td></tr></table></figure>
+<p>显示序列<br> <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> sequence_name,min_value,max_value <span class="keyword">from</span> user_sequences</span><br></pre></td></tr></table></figure></p>
+<p>插入一条数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">insert into tbl_student values(seq_stu_id.nextval,&#x27;mary&#x27;,default,sysdate)//id为2，姓名marry，生日为系统时间</span><br><span class="line">insert into tbl_student values(seq_stu_id.nextval,&#x27;mike&#x27;,&#x27;m&#x27;,to_date(&#x27;2002-10-29&#x27;),&#x27;yyyy-mm-dd&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>查询表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> tbl_student</span><br><span class="line"><span class="keyword">select</span> stu_id,stu_name <span class="keyword">from</span> tbl_student</span><br></pre></td></tr></table></figure>
+
+<p>修改表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">update</span> tbl_student <span class="keyword">set</span> stu_name<span class="operator">=</span><span class="string">&#x27;tom&#x27;</span> <span class="keyword">where</span> stu_id<span class="operator">=</span><span class="number">2</span> <span class="operator">/</span><span class="operator">/</span>修改marry的名字为tom</span><br><span class="line"><span class="keyword">update</span> tbl_student <span class="keyword">set</span> stu_name<span class="operator">=</span><span class="string">&#x27;john&#x27;</span>,stu_sex<span class="operator">=</span><span class="string">&#x27;f&#x27;</span> <span class="keyword">where</span> stu_id<span class="operator">=</span><span class="string">&#x27;3&#x27;</span><span class="operator">/</span><span class="operator">/</span>修改id为<span class="number">3</span>的人姓名性别</span><br></pre></td></tr></table></figure>
+
+<p>删除记录</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tbl_student <span class="keyword">where</span> stu_id<span class="operator">=</span><span class="number">2</span> <span class="operator">/</span><span class="operator">/</span>删除id为<span class="number">2</span>的数据</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> tbl_student <span class="operator">/</span><span class="operator">/</span>全删除</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> tbl_student<span class="operator">/</span><span class="operator">/</span>删除表</span><br></pre></td></tr></table></figure>
+
+<p>退出系统，删除用户</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">exit <span class="operator">/</span><span class="operator">/</span>退出</span><br><span class="line">conn <span class="operator">/</span> <span class="keyword">as</span> sysdba <span class="operator">/</span><span class="operator">/</span>以管理员身登录</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">user</span> user6374 cascade <span class="operator">/</span><span class="operator">/</span>删除用户及所有内容</span><br></pre></td></tr></table></figure>
+<h4 id="2-Sqlplus"><a href="#2-Sqlplus" class="headerlink" title="2. Sqlplus"></a>2. Sqlplus</h4><p>建用户名和密码oracle ,oracle </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">user</span> username identified <span class="keyword">by</span> password</span><br></pre></td></tr></table></figure>
+<p>授权 grant connect,resource,dba,sysdba to username; </p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grant</span> <span class="keyword">connect</span>,resource,dba <span class="keyword">to</span> username</span><br></pre></td></tr></table></figure>
+<p>进入</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">connect</span> username<span class="operator">/</span>password</span><br></pre></td></tr></table></figure>
+<p>显示PLsql输出结果</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> serveroutput <span class="keyword">on</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+  </div>
+  
   
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/"  itemprop="url">
-        oracle建表和基本操作
-      </a>
-    </h2>
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
   
-  <div class='md article-desc' itemprop="articleBody">
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-09-30T11:15:21+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年9月30日</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Oracle/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Oracle</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/sql/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>sql</p></a></div>
+  <span hidden itemprop="keywords">Oracle sql</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        数据库基本操作1. Oracle基本命令以管理员身份登录sql
-1sqlpuls /nolog
-
-连接数据库
-1conn / as sysdba
-
-创建用户user6374 ，密码user6374   
-1create user  user6374 identified by user6374 
-
-查询数据字典
-12select user_name from dba_tablesdesc d...
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/&title=oracle建表和基本操作 - 橙子草草的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/&title=oracle建表和基本操作 - 橙子草草的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/&title=oracle建表和基本操作 - 橙子草草的博客&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
       
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-27T13:20:40+08:00">2022-09-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
 </div>
 
-          </div>
+
+
         
       
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/20/海贼王/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="橙子草草的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="橙子草草的博客">
-    <meta itemprop="description" content="这是一个描述">
-  </span>
-  
-  
-  
-    <div class='headimg-div'>
-      <a class='headimg-a' href="/2022/09/20/%E6%B5%B7%E8%B4%BC%E7%8E%8B/">
-        <img itemprop="image" class='headimg' alt="海贼王漫画" src='https://pic.imgdb.cn/item/6329de7d16f2c2beb12ded87.jpg'/>
-      </a>
     </div>
-  
-  
+    <!-- Custom Files bottomMeta begin -->
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/20/%E6%B5%B7%E8%B4%BC%E7%8E%8B/"  itemprop="url">
-        海贼王漫画
-      </a>
-    </h2>
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-  <div class='md article-desc' itemprop="articleBody">
-    
+  
+
+  
+    <div class="prev-next">
       
-        
+      
+        <a class='next' href='/2022/09/20/%E6%B5%B7%E8%B4%BC%E7%8E%8B/'>
+          <p class='title'>海贼王漫画<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
 放在开头的话
 
 作为一名02年出生的00后，我很幸运，我从小就开始接触海贼王，那会的星空卫视，每天下午五点半到七点，期间也改过其他时间段，但不变的是每天的那一两个小时的日本动漫
-东海篇 :Vol.1-Vol.12风车村篇（路飞启程）:Vol.1相关视频 
-
-主要登场人物路飞 路飞-初登场 
-              
-              
-              
-     ...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-20T13:20:40+08:00">2022-09-20</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B5%B7%E8%B4%BC%E7%8E%8B/">海贼王</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B5%B7%E8%B4%BC%E7%8E%8B/" itemprop="url"><span itemprop="name">海贼王</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/20/%E6%B5%B7%E8%B4%BC%E7%8E%8B/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+东海篇 :Vo...</p>
+        </a>
       
     </div>
   
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
 
-</div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/hexo的使用/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="橙子草草的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="橙子草草的博客">
-    <meta itemprop="description" content="这是一个描述">
-  </span>
   
-  
-  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/"  itemprop="url">
-        hexo的基本使用及博客的备份迁移
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        常用命令
-生成新文章
 
+    <div id="layoutHelper-comments"></div>
 
-hexo new “文章名”     英文标点符号
-
-会生成再sourse&#x2F;_posts之下
+  </article>
 
 
 
-本地预览命令  
 
-hexo s
-
-
-上传命令
-
-hexo g
-hexo d
-
-这两个命令执行后，网页会自动刷新
-或者直接 hexo g -d
-
-
-
-生成新文章
-
-hexo new “文章名”
-
-
-
-博客的迁移建立分支hexo
-在本地目录下（位置任意）右键G...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-11T12:36:37+08:00">2022-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/11/hexo%E7%9A%84%E4%BD%BF%E7%94%A8/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="http://example.com/2022/09/11/Git常用操作/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="橙子草草的博客">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="橙子草草的博客">
-    <meta itemprop="description" content="这是一个描述">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/09/11/Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/"  itemprop="url">
-        Git常用操作
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        基础命令
-git init 初始化
-
-git status 查看仓库状态
-
-git add . 将所有文件添加到暂存区
-
-git commit -m”这里写注释”  将全部文件添加到本地仓库 
-
-git log 查看提交日志
-
-版本回退
-
-git reset –hard commitID（使用git-log获取commitID）
-
-
-查看本地分支
-
-命令：git branch
-
-
-创建本地分...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-09-11T10:40:40+08:00">2022-09-11</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url"><span itemprop="name">学习笔记</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/09/11/Git%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
 
 
 </div>
@@ -3236,53 +3171,44 @@ git reset –hard commitID（使用git-log获取commitID）
     
     
       
-  
-  <section class="widget tagcloud desktop mobile pjax">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Git/" style="font-size: 14px; color: #999">Git</a> <a href="/tags/Oracle/" style="font-size: 14px; color: #999">Oracle</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/sql/" style="font-size: 14px; color: #999">sql</a> <a href="/tags/%E6%BC%AB%E7%94%BB/" style="font-size: 14px; color: #999">漫画</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-<section class="widget text desktop pjax">
-  
-  <header>
-    
-      <a target="_blank" rel="noopener" href='https://github.com/Chinzicam'><i class="fab fa-github fa-fw" aria-hidden="true"></i><span class='name'>来点个赞吧</span></a>
-    
-  </header>
-
-
-  <div class='content'>
-    
-  </div>
-</section>
-
     
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="toc-text">数据库基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-Oracle%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="toc-text">1. Oracle基本命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Sqlplus"><span class="toc-text">2. Sqlplus</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3317,7 +3243,7 @@ git reset –hard commitID（使用git-log获取commitID）
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3326,15 +3252,15 @@ git reset –hard commitID（使用git-log获取commitID）
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="full";
-      cover_wrapper.style.display="";
-      scroll_down.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
+      scroll_down.style.display="none";
     
   
 </script>
@@ -4405,7 +4331,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是一个描述"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"橙子草草的博客"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"橙子草草的博客","url":"http://example.com/","keywords":"橙子草草,chinzicam,Chinzicam","description":"这是一个描述","author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是一个描述"},"publisher":{"@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"这是一个描述","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"橙子草草的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"这是一个描述"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"橙子草草的博客"}},{"@type":"ListItem","position":2,"item":{"@id":"http://example.com/categories/学习笔记/","name":"学习笔记"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2022/09/27/oracle建表和基本操作实验/","name":"oracle建表和基本操作"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"橙子草草的博客","url":"http://example.com/","keywords":"橙子草草,chinzicam,Chinzicam","description":"这是一个描述","author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"这是一个描述"},"publisher":{"@type":"Organization","name":"橙子草草的博客","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"oracle建表和基本操作","description":"这是一个描述","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/"},"author":{"@type":"Person","name":"Chinzicam","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"橙子草草的博客","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/","wordCount":0,"datePublished":"2022-09-27T05:20:40.000Z","dateModified":"2022-09-30T03:15:21.674Z","articleSection":"学习笔记","keywords":"Oracle,sql","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
