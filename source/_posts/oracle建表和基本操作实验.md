@@ -154,11 +154,14 @@ grant connect,resource,dba to username
 ```sql
 connect username/password
 ```
+输出语句
+```sql
+dbms_output_putline('输出的内容')
+```
 显示PLsql输出结果
 ```sql
 set serveroutput on
 ```
-
 
 
 
