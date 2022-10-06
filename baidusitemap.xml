@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://example.com/2022/10/06/%E9%BB%91%E9%A9%ACJava%E5%A4%8D%E4%B9%A018-24%E8%8A%82/</loc>
+    <lastmod>2022-10-06</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2022/10/06/%E9%BB%91%E9%A9%ACJava%E5%A4%8D%E4%B9%A08-17%E8%8A%82/</loc>
+    <lastmod>2022-10-06</lastmod>
+  </url>
+  <url>
+    <loc>http://example.com/2022/10/06/%E9%BB%91%E9%A9%ACjava%E5%A4%8D%E4%B9%A02-7%E8%8A%82/</loc>
+    <lastmod>2022-10-06</lastmod>
+  </url>
+  <url>
     <loc>http://example.com/2022/09/20/%E6%B5%B7%E8%B4%BC%E7%8E%8B/</loc>
-    <lastmod>2022-09-30</lastmod>
+    <lastmod>2022-10-06</lastmod>
   </url>
   <url>
     <loc>http://example.com/2022/09/27/oracle%E5%BB%BA%E8%A1%A8%E5%92%8C%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%AE%9E%E9%AA%8C/</loc>
