@@ -156,6 +156,7 @@ create user username identified by password
 grant connect,resource,dba to username
 ```
 #### 进入
+
 ```sql
 connect username/password
 ```
