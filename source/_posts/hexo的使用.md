@@ -37,7 +37,7 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 ## 博客的迁移
 ### 建立分支hexo
 
-- 在本地目录下（位置任意）右键Git bash here，执行以下指令，把heimu24.github.io项目文件克隆到本地：
+- 在本地目录下（位置任意）右键Git bash here，执行以下指令，把chiznicam.github.io项目文件克隆到本地：
 
 >  git clone https://github.com/Chinzicam/Chinzicam.github.io.git
 - 进入Chinzicam.github.io.git，删除文件夹里除了.git的其他所有文件
