@@ -73,8 +73,8 @@ cover:
     home: true
     archive: true
     others: false # can be written in front-matter 'cover: true'
-  background: https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a
-  # background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
+  # background: https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a
+  background: https://bing.ioliu.cn/v1/rand?w=1920&h=1200
   logo: https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-Cover@3x.png
   title: '橙子草草'
   subtitle: '活到老,学到老'

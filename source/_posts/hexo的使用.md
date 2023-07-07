@@ -35,6 +35,7 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 - 生成新文章
 > hexo new "文章名"
 ## 博客的迁移
+
 ### 建立分支hexo
 
 - 在本地目录下（位置任意）右键Git bash here，执行以下指令，把chiznicam.github.io项目文件克隆到本地：
