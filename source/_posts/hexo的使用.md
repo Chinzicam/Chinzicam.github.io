@@ -64,6 +64,7 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 - 然后执行指令，然后就可以去网站查看效果了。
 > ps：如果要删除文章，直接本地删除，然后再次执行以下两句指令就行了。
 > 如果不行就先执行一下 hexo clean，再执行下面语句 
+	
 	- hexo g #生成
 	-  hexo d #部署 
 	-  或者直接 hexo g -d
@@ -79,6 +80,7 @@ sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部�
 ---
 
 ### 总结
+
 **新建博客hexo new post "你好，hexo" ，然后去source\\_posts 编辑文章，以后每次写完博客**
 
 **通过**
