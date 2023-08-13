@@ -15,6 +15,7 @@
     "hexo": "^5.0.0",
     "hexo-bilibili-bangumi": "^1.8.8",
     "hexo-butterfly-envelope": "^1.0.15",
+    "hexo-deployer-git": "^4.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
