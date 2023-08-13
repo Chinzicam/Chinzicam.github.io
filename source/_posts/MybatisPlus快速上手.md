@@ -4,8 +4,9 @@ date: 2023-05-07 15:04:56
 author: 橙子草草
 tags:
 - Mybatis
+- sql
 categories: 
-- 笔记
+- 后端
 top_img: https://pic.imgdb.cn/item/64d88e291ddac507ccb3415e.webp
 cover: https://pic.imgdb.cn/item/64d88e291ddac507ccb3415e.webp
 ---

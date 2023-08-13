@@ -1,7 +1,7 @@
 menu:
   文章:
-    隧道: /archives/ || anzhiyu-icon-box-archive
-    分类: /categories/ || anzhiyu-icon-shapes
+    归档: /archives/ || anzhiyu-icon-box-archive
+    # 分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
 
   友链:
@@ -13,13 +13,12 @@ menu:
     音乐馆: /music/?id=7699805683&server=tencent || anzhiyu-icon-music
     追番页: /bangumis/ || anzhiyu-icon-bilibili
     相册集: /album/ || anzhiyu-icon-images
-    小空调: /air-conditioner/ || anzhiyu-icon-fan
+    # 小空调: /air-conditioner/ || anzhiyu-icon-fan
 
   关于:
     关于本人: /about/ || anzhiyu-icon-paper-plane
     闲言碎语: /essay/ || anzhiyu-icon-lightbulb
     随便逛逛: javascript:toRandomPost() || anzhiyu-icon-shoe-prints1
-    我的装备: /equipment/ || anzhiyu-icon-dice-d20
 
 # nav相关配置
 nav:
@@ -29,13 +28,12 @@ nav:
   menu:
     - title: 网页
       item:
-        - name: 博客
-          link: https://blog.anheyu.com/
+        - name: GitHub
+          link: https://github.com/Chinzicam
           icon: /img/favicon.ico
-    - title: 项目
-      item:
-        - name: 安知鱼图床
-          link: https://image.anheyu.com/
+
+        - name: b站
+          link: https://space.bilibili.com/243862653
           icon: https://image.anheyu.com/favicon.ico
 
 # Code Blocks (代码相关)
@@ -191,7 +189,8 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    # - /img/default_cover.jpg
+    - https://pic.imgdb.cn/item/64d88cb41ddac507ccaf415b.webp
+    - https://pic.imgdb.cn/item/64d88a7d1ddac507ccaa08bf.webp
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -230,7 +229,7 @@ mainTone:
 # wordcount (字数统计)
 # see https://butterfly.js.org/posts/ceeb73f/#字数统计
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
@@ -262,7 +261,7 @@ toc:
 post_copyright:
   enable: true
   decode: false
-  author_href:
+  author_href: chinzicam
   location: 福州
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -341,7 +340,7 @@ comments:
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: false
-  count: false # Display comment count in post's top_img
+  count: true # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
 # valine
@@ -856,7 +855,7 @@ busuanzi:
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
   enable: true
-  publish_date: 6/9/2022 00:00:00
+  publish_date: 9/9/2022 13:24:50
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -1034,28 +1033,28 @@ home_top:
   subTitle: 万物可爱。
   siteText: https://github.com/Chinzicam.com
   category:
-    - name: 前端
-      path: /categories/前端开发/
+    - name: 后端
+      path: /categories/后端/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: anzhiyu-icon-dove
-    - name: 大学
-      path: /categories/大学生涯/
+    - name: 教程
+      path: /categories/教程/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-fire
-    - name: 生活
-      path: /categories/生活日常/
+    - name: 其他
+      path: /categories/其他/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-book
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
-    enable: false
+    enable: true
     swiper_css: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css #swiper css依赖
     swiper_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.js #swiper js依赖
   banner:
-    tips: 新品主题
+    tips: 小破站主题
     title: Theme-AnZhiYu
     image: https://bu.dusays.com/2023/05/13/645fa3cf90d70.webp
     link: https://docs.anheyu.com/
@@ -1073,7 +1072,7 @@ universe:
 
 # 页面卡片顶部气泡升起效果
 bubble:
-  enable: false
+  enable: true
 
 #  控制台打印信息
 console:
@@ -1159,7 +1158,7 @@ greetingBox:
 
 # 文章顶部ai摘要
 post_head_ai_description:
-  enable: true
+  enable: false
   gptName: AnZhiYu
   mode: local # 默认模式 可选值: tianli/local
   switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local

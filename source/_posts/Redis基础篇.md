@@ -1,12 +1,11 @@
 ---
 title: Redis基础篇
 author: 橙子草草
-date: 2023-07-21 10:40:40
+date: 2023-07-16 10:40:40
 tags:
 - Redis
 category:
-- 笔记
-
+- 后端
 top_img: https://pic.imgdb.cn/item/64d893a91ddac507ccc06be5.webp
 cover: https://pic.imgdb.cn/item/64d893a91ddac507ccc06be5.webp
 
