@@ -1,7 +1,7 @@
 menu:
   文章:
     归档: /archives/ || anzhiyu-icon-box-archive
-    # 分类: /categories/ || anzhiyu-icon-shapes
+    分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
 
   友链:
