@@ -5,16 +5,12 @@ date: 2023-05-21 10:40:40
 tags:
 - MybatisPlus
 category:
-- 学习笔记
-music:
- server: netease   # netease, tencent, kugou, xiami, baidu
- type: song        # song, playlist, album, search, artist
- id: 16846091      # song id / playlist id / album id / search keyword
-cover: true
-sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部件
+- 笔记
+
+top_img: https://pic.imgdb.cn/item/64d8933f1ddac507ccbf839f.webp
+cover: https://pic.imgdb.cn/item/64d8933f1ddac507ccbf839f.webp
+
 ---
-
-
 
 ## 1.问题分析
 

@@ -5,9 +5,9 @@ author: 橙子草草
 tags:
 - Mybatis
 categories: 
-- 学习笔记
-cover: true
-sidebar: [blogger, category, toc] # 放置任何你想要显示的侧边栏部件
+- 笔记
+top_img: https://pic.imgdb.cn/item/64d88e291ddac507ccb3415e.webp
+cover: https://pic.imgdb.cn/item/64d88e291ddac507ccb3415e.webp
 ---
 
 ## Mybatis_Plus简单使用
@@ -44,9 +44,9 @@ MyBatis-Plus （简称 MP）是一个 **MyBatis**的增强工具，在 MyBatis �
 
 2. 创建springboot项目
 
-   ![image-20230607140951825](MybatisPlus快速上手.assets/image-20230607140951825.png)
+{% asset_img image-20230607140951825.png %}
 
-   ![image-20230607141044587](MybatisPlus快速上手.assets/image-20230607141044587.png)
+{% asset_img image-20230607141044587.png %}
 
    
 
@@ -366,5 +366,4 @@ MyBatis-Plus （简称 MP）是一个 **MyBatis**的增强工具，在 MyBatis �
    ```
 
 2. 目录结构
-
-   ![image-20230607143537593](MybatisPlus快速上手.assets/image-20230607143537593.png)
+{% asset_img image-20230607143537593.png %}
