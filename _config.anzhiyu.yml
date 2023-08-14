@@ -94,9 +94,10 @@ algolia_search:
 # Settings: https://www.algolia.com/
 docsearch:
   enable: false
-  appId:  # see email
-  apiKey:  # see email
-  indexName:  # see email
+  appId:  "P7WFMP8RIM" # see email
+  apiKey: "f2cf89d78fa2c7c94e2bdf3a72e48015"  # see email
+  adminApiKey: "93c7a849da4ae15c09004b2547fc99db"
+  indexName: "hexo" # see email
   option:
     placeholder: 'Ctrl/⌘ + K 唤醒搜索服务'
     maxResultsPerGroup: 7
@@ -436,7 +437,7 @@ footer:
     since: 2020
   custom_text:
   runtime:
-    enable: false
+    enable: true
     launch_time: 09/06/2022 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
@@ -445,7 +446,7 @@ footer:
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: false
+    enable: true
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
@@ -463,12 +464,15 @@ footer:
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
         message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
   socialBar:
-    enable: false
+    enable: true
     centerImg:
     left:
-      # - title: email
-      #   link: mailto:anzhiyu-c@qq.com
-      #   icon: anzhiyu-icon-envelope
+      - title: email
+        link: a3189797316@163.com
+        icon: anzhiyu-icon-envelope
+      - title: Bilibili
+        link: https://space.bilibili.com/243862653
+        icon: anzhiyu-icon-bilibili
       # - title: 微博
       #   link: https://weibo.com/u/6378063631
       #   icon: anzhiyu-icon-weibo
@@ -479,12 +483,12 @@ footer:
       #   link: atom.xml
       #   icon: anzhiyu-icon-rss
     right:
-      # - title: Github
-      #   link: https://github.com/anzhiyu-c
-      #   icon: anzhiyu-icon-github
-      # - title: Bilibili
-      #   link: https://space.bilibili.com/372204786
-      #   icon: anzhiyu-icon-bilibili
+      - title: Github
+        link: https://github.com/Chinzicam
+        icon: anzhiyu-icon-github
+      - title: email
+        link: 3189797316@qq.com
+        icon: anzhiyu-icon-envelope
       # - title: 抖音
       #   link: https://v.douyin.com/DwCpMEy/
       #   icon: anzhiyu-icon-tiktok
@@ -492,41 +496,41 @@ footer:
       #   link: /copyright
       #   icon: anzhiyu-icon-copyright-line
   list:
-    enable: false
+    enable: true
     randomFriends: 3
     project:
-      # - title: 服务
-      #   links:
-      #     - title: 51la统计
-      #       link: https://v6.51.la/
-      #     - title: 十年之约
-      #       link: https://www.foreverblog.cn/
-      #     - title: 开往
-      #       link: https://github.com/travellings-link/travellings
-      # - title: 主题
-      #   links:
-      #     - title: 文档
-      #       link: /docs/
-      #     - title: 源码
-      #       link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-      #     - title: 更新日志
-      #       link: /update/
-      # - title: 导航
-      #   links:
-      #     - title: 即刻短文
-      #       link: /essay/
-      #     - title: 友链文章
-      #       link: /fcircle/
-      #     - title: 留言板
-      #       link: /comments/
-      # - title: 协议
-      #   links:
-      #     - title: 隐私协议
-      #       link: /privacy/
-      #     - title: Cookies
-      #       link: /cookies/
-      #     - title: 版权协议
-      #       link: /copyright/
+      - title: 服务
+        links:
+          - title: 51la统计
+            link: https://v6.51.la/
+          - title: 十年之约
+            link: https://www.foreverblog.cn/
+          - title: 开往
+            link: https://github.com/travellings-link/travellings
+      - title: 主题
+        links:
+          - title: 文档
+            link: https://blog.anheyu.com/docs/
+          - title: 源码
+            link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
+          - title: 更新日志
+            link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu/commits/dev
+      - title: 导航
+        links:
+          - title: 即刻短文
+            link: /essay/
+          - title: 友链文章
+            link: /fcircle/
+          - title: 留言板
+            link: /comments/
+      - title: 协议
+        links:
+          - title: 隐私协议
+            link: /privacy/
+          - title: Cookies
+            link: /cookies/
+          - title: 版权协议
+            link: /copyright/
   footerBar:
     enable: true
     authorLink: /
@@ -535,9 +539,9 @@ footer:
       link: /copyright
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
-        text: 主题
-      # - link: https://image.anheyu.com
-      #   text: 图床
+        text: 当前主题
+      - link: https://github.com/Chinzicam
+        text: Github
       # - link: https://beian.miit.gov.cn/
       #   text: 湘ICP备-xxxxxxx号
     subTitle:
@@ -703,25 +707,25 @@ activate_power_mode:
 
 # Mouse click effects: fireworks (鼠标点击效果: 烟火特效)
 fireworks:
-  enable: false
+  enable: true
   zIndex: 9999 # -1 or 9999
   mobile: false
 
 # Mouse click effects: Heart symbol (鼠标点击效果: 爱心)
 click_heart:
   enable: true
-  mobile: false
+  mobile: true
 
 # Mouse click effects: words (鼠标点击效果: 文字)
 ClickShowText:
-  enable: false
+  enable: true
   text:
     - I
     - LOVE
     - YOU
   fontSize: 15px
   random: true
-  mobile: false
+  mobile: true
 
 # Default display mode (网站默认的显示模式)
 # light (default) / dark
@@ -819,14 +823,14 @@ aside:
     sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
-    enable: false
+    enable: true
     limit: 8 # if set 0 will show all
     expand: none # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
     enable: true
     limit: 40 # if set 0 will show all
-    color: false
+    color: true
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
       # - Hexo

@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 橙子草草的小破站
+title: 橙子草的小破站
 subtitle: ''
 description: '木叶飞舞之处，火亦生生不息'
-keywords: 橙子草草,chinzicam,Chinzicam
+keywords: 橙子草,chinzicam,Chinzicam
 author: Chinzicam
 language: zh-CN
 timezone: ''
@@ -169,3 +169,21 @@ envelope_comment:
     comments: true
     top_img: false
     type: envelope
+
+
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+# algolia:
+#   appId:  "P7WFMP8RIM" # see email
+#   apiKey: "f2cf89d78fa2c7c94e2bdf3a72e48015"  # see email
+#   adminApiKey: "93c7a849da4ae15c09004b2547fc99db"
+#   chunkSize: 5000
+#   indexName: "hexo"
+#   fields:
+#     - content:strip:truncate,0,200
+#     - excerpt:strip
+#     - gallery
+#     - permalink
+#     - photos
+#     - slug
+#     - tags
+#     - title
