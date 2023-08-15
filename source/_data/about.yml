@@ -1,7 +1,7 @@
 - class_name: 关于页
   subtitle: 生活明朗，万物可爱✨
   avatarImg: https://pic.imgdb.cn/item/631d7d2f16f2c2beb1f59108.jpg
-  name: 橙子草草
+  name: 橙子草
   description: 是一名 后端工程师、学生、up主
   aboutsiteTips:
     tips: 追求
@@ -15,7 +15,7 @@
   helloAbout: Hello there!
   skillsTips:
     tips: 技能
-    title: Java,spring,mybatis,redis
+    title: Java,Spring,Mybatis,Redis
   careers:
     tips: 生涯
     title: 无限进步
@@ -83,7 +83,7 @@
     like_bottom: 二次元，游戏
   music:
     music_tips: 音乐偏好
-    music_title: 老歌，周杰伦，二次元
+    music_title: 南征北战，周杰伦，二次元
     music_bg: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
     music_link: /music
   # reward_list:

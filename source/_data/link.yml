@@ -12,23 +12,46 @@
       descr: 生活明朗，万物可爱
       siteshot: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg
 
-- class_name: 推荐博客
+- class_name: 推荐网站
   flink_style: flexcard
   link_list:
-    - name: 安知鱼
-      hundredSuffix: ""
-      link: https://blog.anheyu.com/
-      avatar: https://img02.anheyu.com/adminuploads/1/2022/09/15/63232b7d91d22.jpg
-      descr: 生活明朗，万物可爱
-      siteshot: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/anzhiy.cn.jpg
-    - name: Moeyy
-      hundredSuffix: ""
-      link: https://moeyy.cn/
-      avatar: https://i1.hdslb.com/bfs/face/94e387b6d660cf47b27999ba6b457bdb49ea25e2.jpg
-      descr: 一条有远大理想的咸鱼
-      siteshot: https://pic.imgdb.cn/item/64d8cba41ddac507cc3ac8d7.png
 
-- class_name: 小伙伴
+    - name: SQL之父
+      hundredSuffix: ""
+      link: http://sqlfather.yupi.icu/
+      avatar: data:image/png;base64,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
+      descr: 快速生成 SQL 和模拟数据，大幅提高开发测试效率！
+      siteshot: https://pic.imgdb.cn/item/64db337c1ddac507cc5b6215.jpg
+      
+    - name: nonebot
+      hundredSuffix: ""
+      link: https://nonebot.dev/store
+      avatar: https://nonebot.dev/logo.png
+      descr: 一个好用的QQ机器人框架
+      siteshot: https://pic.imgdb.cn/item/64db355c1ddac507cc60067f.jpg
+
+    - name: 异常教程
+      hundredSuffix: ""
+      link: https://www.exception.site/
+      # avatar: https://nonebot.dev/logo.png
+      descr: 一个包括各种破解教程的网站
+      siteshot: https://pic.imgdb.cn/item/64db37731ddac507cc6539df.jpg
+
+    - name: 聚合图床
+      hundredSuffix: ""
+      link: https://www.superbed.cn/
+      avatar: https://www.superbed.cn/favicon.ico
+      descr: 我最近在用的一个图床
+      siteshot: https://pic.imgdb.cn/item/64db33091ddac507cc5a4706.jpg
+
+    - name: 熊猫图片压缩
+      hundredSuffix: ""
+      link: https://tinypng.com/
+      avatar: https://p.zhheo.com/1e6a15e791e40bb7808be13232144ee2fb1e1349.png!cover_mini
+      descr: 热门的图片压缩工具
+      siteshot: https://pic.imgdb.cn/item/64db37731ddac507cc6539df.jpg
+
+- class_name: 推荐博客
   class_desc: 那些人，那些事
   flink_style: anzhiyu
   link_list:
@@ -37,3 +60,18 @@
       link: https://blog.anheyu.com
       avatar: https://img02.anheyu.com/adminuploads/1/2022/09/15/63232b7d91d22.jpg
       descr: 生活明朗，万物可爱
+    - name: Moeyy
+      hundredSuffix: ""
+      link: https://moeyy.cn/
+      avatar: https://moeyy.cn/favicon.ico
+      descr: 一条有远大理想的咸鱼
+    - name: 张洪heo
+      hundredSuffix: ""
+      link: https://blog.zhheo.com/
+      avatar: https://zhheo.com/img/icon.webp
+      descr: 分享设计与科技生活
+    - name: Kyle
+      hundredSuffix: ""
+      link: https://cyborg2077.github.io/
+      avatar: https://cyborg2077.github.io/favicon.ico
+      descr: 实习中，可能要停更很久了

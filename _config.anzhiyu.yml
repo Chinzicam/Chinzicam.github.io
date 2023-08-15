@@ -84,7 +84,7 @@ author_status:
 
 # Algolia search
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 6
 
@@ -1174,7 +1174,7 @@ post_head_ai_description:
 
 # 快捷键配置
 shortcutKey:
-  enable: false
+  enable: true
   delay: 100 # 所有键位延时触发而不是立即触发（包括shift，以解决和浏览器键位冲突问题）
   shiftDelay: 200 # shift按下延时多久开启
 
