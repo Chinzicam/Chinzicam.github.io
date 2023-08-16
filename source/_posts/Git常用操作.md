@@ -1,6 +1,6 @@
 ---
 title: Git常用操作
-author: 橙子草草
+author: 橙子草
 date: 2022-09-11 10:40:40
 tags:
 - Git

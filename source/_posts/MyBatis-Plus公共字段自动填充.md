@@ -1,6 +1,6 @@
 ---
 title: MyBatis-Plus公共字段自动填充
-author: 橙子草草
+author: 橙子草
 date: 2023-05-21 10:40:40
 tags:
 - MybatisPlus
@@ -19,7 +19,7 @@ cover: https://pic.imgdb.cn/item/64d8933f1ddac507ccbf839f.webp
 
 {% asset_img image-20220725172038979.png %}
 
-答案就是使用`Mybatis Plus`提供的**公共字段自动填充功能**。
+答案就是使用`Mybatis Plus`提供的[公共字段自动填充功能]([自动填充功能 | MyBatis-Plus (baomidou.com)](https://baomidou.com/pages/4c6bcf/))。
 
 ## 2.实现步骤
 

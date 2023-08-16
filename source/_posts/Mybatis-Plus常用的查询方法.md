@@ -1,7 +1,7 @@
 ---
 title: Mybatis-Plus常用的查询方法
 date: 2023-05-15 21:12:03
-author: 橙子草草
+author: 橙子草
 tags:
 - MybatisPlus
 - sql
@@ -13,100 +13,164 @@ cover: https://pic.imgdb.cn/item/64d892d01ddac507ccbe8d48.webp
 
 ---
 
-### Mybatis-Plus常用的查询方法
+# Mybatis-Plus常用的查询方法
 
 Mybatis-Plus作为Mybatis的增强，自己封装了很多简单还用的方法，来解脱自己写sql！
 
-#### 根据主键id去查询单个结果 selectById
+更多内容请查看 [官网]([CRUD 接口 | MyBatis-Plus (baomidou.com)](https://baomidou.com/pages/49cc81/#service-crud-接口))
 
-	/**
-	 * 方法一： 根据主键id去查询单个结果
-	 * T selectById(Serializable id); ---参数为主键类型
-	 */
-	 
-	User user1 = userMapper.selectById(1);
-	
-	返回值结果
-	{"id": 1,"name": "czc","age": 222}
+---
 
+## AbstractWrapper
 
-#### 查询多条数据库中的记录 selectList
+> 说明:
+>
+> QueryWrapper(LambdaQueryWrapper) 和 UpdateWrapper(LambdaUpdateWrapper) 的父类
+> 用于生成 sql 的 where 条件, entity 属性也用于生成 sql 的 where 条件
+> 注意: entity 生成的 where 条件与 使用各个 api 生成的 where 条件**没有任何关联行为**
 
-	/**
-	* 方法二：  查询多条数据库中的记录
-	* List<T> selectList(@Param("ew") Wrapper<T> queryWrapper);  
-	* ---参数为Wrapper可以为空说明没有条件的查询
-	*/
-	
-	List<User> users1 = userMapper.selectList(null);
-	
-	运行结果集
-	{"id": 1,"name": "df","age": 222},{"id": 2,"name": "wang","age": 22}]
+### eq
 
-#### 查询多条数据库中的记录—条件查询 selectList(wrapper)
+```java
+eq(R column, Object val)
+eq(boolean condition, R column, Object val)
+```
 
-	/**
-	 * 方法三：查询多条数据库中的记录---条件查询
-	 * List<T> selectList(@Param("ew") Wrapper<T> queryWrapper);
-	 */
-	 
-	//首先构造QueryWrapper来进行条件的添加
-	QueryWrapper wrapper = new QueryWrapper();
-	wrapper.eq("id",1);//相当于where id=1
-	
-	List<User> list = userMapper.selectList(wrapper);
+- 等于 =
+- 例: `eq("name", "老王")`--->`name = '老王'`
 
+---
 
-​	
-	返回值结果
-	{"id": 1,"name": "df","age": 222}
+### gt
 
+```java
+gt(R column, Object val)
+gt(boolean condition, R column, Object val)
+```
 
-#### 条件构造器QueryWrapper常用方法
+- 大于 >
+- 例: `gt("age", 18)`--->`age > 18`
 
-	/**
-	  *附加条件构造器QueryWrapper常用方法 ---这几个肯定够用了
-	  */
-	  
-	 wrapper.eq("数据库字段名", "条件值"); //相当于where条件
-	 wrapper.between("数据库字段名", "区间一", "区间二");//相当于范围内使用的between
-	 wrapper.like("数据库字段名", "模糊查询的字符"); //模糊查询like
-	 wrapper.groupBy("数据库字段名");  //相当于group by分组
-	 wrapper.in("数据库字段名", "包括的值,分割"); //相当于in
-	 wrapper.orderByAsc("数据库字段名"); //升序
-	 wrapper.orderByDesc("数据库字段名");//降序
-	 wrapper.ge("数据库字段名", "要比较的值"); //大于等于
-	 wrapper.le("数据库字段名", "要比较的值"); //小于等于
+---
 
-#### 根据主键的id集合进行多条数据的查询 selectBatchIds
+### lt
 
-	/**
-	 * 方法四：  根据主键的id集合进行多条数据的查询
-	 * List<T> selectBatchIds(@Param("coll") Collection<? extends Serializable> idList);   
-	 * --条件为集合
-	 */
-	 
-	List list1 = Arrays.asList(1,2);
-	List<User> list2 = userMapper.selectBatchIds(list1);
-	
-	运行结果集
-	[{"id": 1,"name": "df","age": 222},{"id": 2,"name": "wang","age": 22}]
+```java
+lt(R column, Object val)
+lt(boolean condition, R column, Object val)
+```
 
+- 小于 <
+- 例: `lt("age", 18)`--->`age < 18`
 
-#### 分页查询 selectPage
+---
 
-	/**
-	 * 方法五：  分页查询
-	 * IPage<T> selectPage(IPage<T> page, @Param("ew") Wrapper<T> queryWrapper);  
-	 * ---参数为分页的数据+条件构造器
-	 */
-	 
-	IPage<User> page = new Page<>(1,2);//参数一：当前页，参数二：每页记录数
-	//这里想加分页条件的可以如方法三自己构造条件构造器
-	IPage<User> userIPage = userMapper.selectPage(page, null);
+### between
 
+```java
+between(R column, Object val1, Object val2)
+between(boolean condition, R column, Object val1, Object val2)
+```
 
-​	
-	运行结果集
-	{"records":[{"id": 1,"name": "df","age": 222},{"id": 2,"name": "wang","age": 22}],
-	"total": 0,"size": 2,"current": 1,"searchCount": true,"pages": 0 }
+- BETWEEN 值1 AND 值2
+- 例: `between("age", 18, 30)`--->`age between 18 and 30`
+
+---
+
+### like
+
+```java
+like(R column, Object val)
+like(boolean condition, R column, Object val)
+```
+
+- LIKE '%值%'
+- 例: `like("name", "王")`--->`name like '%王%'`
+
+---
+
+### in
+
+```java
+in(R column, Collection<?> value)
+in(boolean condition, R column, Collection<?> value)
+```
+
+- 字段 IN (value.get(0), value.get(1), ...)
+- 例: `in("age",{1,2,3})`--->`age in (1,2,3)`
+
+```java
+in(R column, Object... values)
+in(boolean condition, R column, Object... values)
+```
+
+- 字段 IN (v0, v1, ...)
+- 例: `in("age", 1, 2, 3)`--->`age in (1,2,3)`
+
+---
+
+###  inSql
+
+```java
+inSql(R column, String inValue)
+inSql(boolean condition, R column, String inValue)
+```
+
+- 字段 IN ( sql语句 )
+- 例: `inSql("age", "1,2,3,4,5,6")`--->`age in (1,2,3,4,5,6)`
+- 例: `inSql("id", "select id from table where id < 3")`--->`id in (select id from table where id < 3)`
+
+---
+
+### groupBy
+
+```java
+groupBy(R... columns)
+groupBy(boolean condition, R... columns)
+```
+
+- 分组：GROUP BY 字段, ...
+- 例: `groupBy("id", "name")`--->`group by id,name`
+
+---
+
+###  orderByDesc
+
+```java
+orderByDesc(R... columns)
+orderByDesc(boolean condition, R... columns)
+```
+
+- 排序：ORDER BY 字段, ... DESC
+- 例: `orderByDesc("id", "name")`--->`order by id DESC,name DESC`
+
+---
+
+## 使用 Wrapper 自定义SQL
+
+---
+
+### 用注解
+
+```java
+@Select("select * from mysql_data ${ew.customSqlSegment}")
+List<MysqlData> getAll(@Param(Constants.WRAPPER) Wrapper wrapper);
+```
+
+---
+
+### 用XML
+
+Mapper接口：
+
+```java
+List<MysqlData> getAll(Wrapper ew);
+```
+
+mapper.xml
+
+```xml
+<select id="getAll" resultType="MysqlData">
+	SELECT * FROM mysql_data ${ew.customSqlSegment}
+</select>
+```

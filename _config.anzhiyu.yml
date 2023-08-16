@@ -501,8 +501,8 @@ footer:
     project:
       - title: 服务
         links:
-          - title: 51la统计
-            link: https://v6.51.la/
+          - title: algolia搜索
+            link: https://dashboard.algolia.com/
           - title: 十年之约
             link: https://www.foreverblog.cn/
           - title: 开往
@@ -709,20 +709,29 @@ activate_power_mode:
 fireworks:
   enable: true
   zIndex: 9999 # -1 or 9999
-  mobile: false
+  mobile: true
 
 # Mouse click effects: Heart symbol (鼠标点击效果: 爱心)
 click_heart:
-  enable: true
-  mobile: true
+  enable: false
+  mobile: false
 
 # Mouse click effects: words (鼠标点击效果: 文字)
 ClickShowText:
   enable: true
   text:
-    - I
-    - LOVE
-    - YOU
+    - 富强
+    - 民主
+    - 文明
+    - 和谐
+    - 自由
+    - 平等
+    - 公正
+    - 法治
+    - 爱国
+    - 敬业
+    - 诚信
+    - 友善
   fontSize: 15px
   random: true
   mobile: true

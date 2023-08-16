@@ -1,6 +1,6 @@
 ---
 title: Oracle初体验
-author: 橙子草草
+author: 橙子草
 date: 2022-09-27 13:20:40
 top_img: https://pic.imgdb.cn/item/64d889b01ddac507cca8156c.webp
 cover: https://pic.imgdb.cn/item/64d88bc51ddac507ccad1fd2.webp

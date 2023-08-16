@@ -1,6 +1,6 @@
 ---
 title: Markdown+TyporaVSCode 教程
-author: 橙子草草
+author: 橙子草
 top_img: https://pic.imgdb.cn/item/64d88cb41ddac507ccaf415b.webp
 cover: https://pic.imgdb.cn/item/64d88cb41ddac507ccaf415b.webp
 date: 2022-10-06 09:57:57

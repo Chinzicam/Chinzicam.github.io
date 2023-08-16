@@ -1,7 +1,7 @@
 ---
 title: SpringBoot整合Mybatis
 date: 2023-04-13 22:39:41
-author: 橙子草草
+author: 橙子草
 top_img: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
 cover: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
 tags:
