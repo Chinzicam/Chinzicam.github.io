@@ -11,6 +11,8 @@ top_img: https://pic.imgdb.cn/item/64dc65cd661c6c8e548aae6a.jpg
 cover: https://pic.imgdb.cn/item/64dc65cd661c6c8e548aae6a.jpg
 ---
 
+> 本文档对应的代码仓库 [hmdp](https://github.com/Chinzicam/hmdp)
+
 ### 缓存穿透问题的解决思路
 
 什么是缓存穿透？

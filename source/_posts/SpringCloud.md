@@ -15,6 +15,9 @@ top_img: https://pic.imgdb.cn/item/64df03b9661c6c8e54d20489.jpg
 cover: https://pic.imgdb.cn/item/64df03b9661c6c8e54d20489.jpg
 ---
 
+> 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程和[Kyle](https://cyborg2077.github.io/2022/11/08/SpringCloud/)的笔记参考
+
+> 本文档对应的代码仓库 [cloud-demo](https://github.com/Chinzicam/SpringCloud_Project)
 
 # 认识微服务
 
@@ -75,7 +78,7 @@ cover: https://pic.imgdb.cn/item/64df03b9661c6c8e54d20489.jpg
 
 ## SpringCloud
 
-- SpringCloud 是目前国内使用最广泛的微服务架构。官网地址：https://spring.io/projects/spring-cloud
+- SpringCloud 是目前国内使用最广泛的微服务架构 ->[官网地址](https://spring.io/projects/spring-cloud)
 - SpringCloud 集成了各种微服务功能组件，并基于SpringBoot实现了这些组件的自动装配，从而提供了良好的开箱即用体验。
 - 其中常见的组件包括
   - 微服务注册与发现
@@ -237,9 +240,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   }
   ```
   
-- 我们打开浏览器，访问
-
-  http://localhost:8080/order/101，是可以查询到数据的，但此时的user是null
+- 我们打开浏览器，访问 http://localhost:8080/order/101 ，是可以查询到数据的，但此时的user是null
 
   ```JSON
   {
@@ -276,7 +277,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   }
   ```
   
-- 我们打开浏览器，访问http://localhost:8081/user/1，查询到的数据如下
+- 我们打开浏览器，访问 http://localhost:8081/user/1 ，查询到的数据如下
 
   ```JSON
   {
@@ -290,7 +291,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 - 修改order-service中的根据id查询订单业务，要求在查询订单的同时，根据订单中包含的userId查询出用户信息，一并返回
   ![img](https://pic1.imgdb.cn/item/636c781316f2c2beb1ad9894.jpg)
-- 因此，我们需要在order-service 中向user-service 发起一个http 请求，调用http://localhost:8081/user/{userId} 这个接口。
+- 因此，我们需要在order-service 中向user-service 发起一个http 请求，调用 http://localhost:8081/user/{userId} 这个接口。
 - 大概步骤如下
   1. 注册一个RestTemplate 的实例到Spring 容器
   2. 修改order-service 服务中的OrderService 类中的queryOrderById 方法，根据Order 对象中的userId 查询User
@@ -340,7 +341,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   }
   ```
 
-- 再次访问http://localhost:8080/order/101， 这次就能看到User数据了
+- 再次访问 http://localhost:8080/order/101 ， 这次就能看到User数据了
 
   ```JSON
   {
@@ -610,7 +611,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 - SpringCloud底层其实是利用了一个名为Ribbon的组件，来实现负载均衡功能的
   ![img](https://pic1.imgdb.cn/item/636ce11216f2c2beb14b55af.jpg)
-- 那么我们明明发出的请求是http://userservice/user/1， 怎么变成了http://localhost:8080/user/1 的呢
+- 那么我们明明发出的请求是 http://userservice/user/1 ， 怎么变成了 http://localhost:8080/user/1 的呢
 
 - 整个流程如下
   1. 拦截我们的RestTemplate请求：http://user-service/user/1
@@ -750,7 +751,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   startup.cmd -m standalone
   ```
   
-- 之后在浏览器访问http://localhost:8848/nacos 即可，默认的登录账号和密码都是nacosBASH
+- 之后在浏览器访问 http://localhost:8848/nacos 即可，默认的登录账号和密码都是nacosBASH
 
 ## 服务注册到Nacos
 
@@ -883,9 +884,9 @@ SET FOREIGN_KEY_CHECKS = 1;
          NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule # 负载均衡规则
      ```
   
-- 那我们现在访问http://localhost:8080/order/101 ，同时观察三个user-service的日志输出，集群名称为HZ的两个user-service可以看到日志输出，而集群名称为SH的user-service则看不到日志输出
+- 那我们现在访问 http://localhost:8080/order/101 ，同时观察三个user-service的日志输出，集群名称为HZ的两个user-service可以看到日志输出，而集群名称为SH的user-service则看不到日志输出
 
-- 那我们现在将集群名称为HZ的两个user-service服务停掉，那么现在访问http://localhost:8080/order/101， 则集群名称为SH的user-service会输出日志
+- 那我们现在将集群名称为HZ的两个user-service服务停掉，那么现在访问 http://localhost:8080/order/101， 则集群名称为SH的user-service会输出日志
 
 - NacosRule负载均衡策略
 
@@ -938,7 +939,7 @@ SET FOREIGN_KEY_CHECKS = 1;
           namespace: ea980a8c-c886-4a2c-8653-d29c62d518bb # 命名空间，填上图中的命名空间ID
   ```
   
-- 重启order-service后，访问Nacos控制台，可以看到下面的结果，此时访问order-service，因为namespace不同，会导致找不到user-service，若访问http://localhost:8080/order/101 则会报错
+- 重启order-service后，访问Nacos控制台，可以看到下面的结果，此时访问order-service，因为namespace不同，会导致找不到user-service，若访问 http://localhost:8080/order/101 则会报错
   ![img](https://pic1.imgdb.cn/item/636e065216f2c2beb1ce96db.jpg)
 
 ## Nacos和Eureka的区别
@@ -1060,7 +1061,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   }
   ```
   
-- 打开浏览器，访问http://localhost:8081/user/test， 看到如下结果，则说明确实读取到了配置信息
+- 打开浏览器，访问 http://localhost:8081/user/test， 看到如下结果，则说明确实读取到了配置信息
   ![img](https://pic1.imgdb.cn/item/636e72a416f2c2beb1a5f0b8.jpg)
 
 ## 配置热更新
@@ -1091,7 +1092,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   
 - 测试是否热更新
 
-  - 启动服务，打开浏览器，访问http://localhost:8081/user/test， 由于我们之前配置的dateformat是yyyy-MM-dd MM:hh:ss，所以看到的日期格式为`2022-11-12 22:11:03`
+  - 启动服务，打开浏览器，访问 http://localhost:8081/user/test， 由于我们之前配置的dateformat是yyyy-MM-dd MM:hh:ss，所以看到的日期格式为`2022-11-12 22:11:03`
 
   - 那我们现在直接在Nacos中编辑配置信息，并保存
 
@@ -1572,8 +1573,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 - 先来看看我们以前利用RestTemplate发起远程调用的代码
 
-  ```
-  JAVA
+  ```JAVA
   String url = "http://user-service/user/" + order.getUserId();
   User user = restTemplate.getForObject(url, User.class);
   ```
@@ -1585,7 +1585,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 - 我们可以利用Feign来解决上面提到的问题
 
-- Feign是一个声明式的http客户端，官网地址https://github.com/OpenFeign/feign， 其作用就是帮助我们优雅的实现http请求的发送
+- Feign是一个声明式的http客户端，[官网地址](https://github.com/OpenFeign/feign)， 其作用就是帮助我们优雅的实现http请求的发送
 
 ## Feign替代RestTemplate
 
@@ -1756,7 +1756,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   @FeignClient(value = "user-service", configuration = DefaultFeignConfiguration.class)
   ```
 
-## Feign使用优化
+## Feign性能优化
 
 - Feign底层发起http请求，依赖于其他框架，其底层客户端实现包括
 
@@ -1810,7 +1810,6 @@ SET FOREIGN_KEY_CHECKS = 1;
 - 仔细观察发现，Feign的客户端与服务提供者的controller代码十分相似
 
   - Feign
-  - Controller
 
   ```JAVA
   @FeignClient(value = "user-service",configuration = DefaultFeignConfiguration.class)
@@ -1819,9 +1818,24 @@ SET FOREIGN_KEY_CHECKS = 1;
       User findById(@PathVariable("id") Long id);
   }
   ```
-  
-  
-  
+
+  - Controller
+
+  ```java
+  @RestController
+  @RequestMapping("/user")
+  @RefreshScope
+  public class UserController {
+      @Autowired
+      private UserService userService;
+
+      @GetMapping("/{id}")
+      public User queryById(@PathVariable("id") Long id) {
+          return userService.queryById(id);
+      }
+  }
+  ```
+
 - 除了方法名，其余代码几乎一模一样，那有没有一种方法简化这种重复的代码编写呢？
 
 ### 继承方式
@@ -1840,14 +1854,24 @@ SET FOREIGN_KEY_CHECKS = 1;
   2. Feign客户端和Controller都继承该接口
   
      - Feign客户端
-     - Controller
+     
   
      ```JAVA
      @FeignClient(value = "user-service")
      public interface UserClient extends UserAPI{}
      ```
      
-  
+     - Controller
+     
+     ```java
+      @RestController
+      public class UserController implents UserAPI{
+          public User findById(@PathVariable("id") Long id){
+              // ...实现业务逻辑
+          }
+      }
+     ```
+
 - 优点
 
   1. 简单
@@ -1878,7 +1902,8 @@ SET FOREIGN_KEY_CHECKS = 1;
      ```
      
    - 然后将order-service中编写的UserClient、User、DefaultFeignConfiguration都复制到feign-api项目中
-     ![img](https://pic1.imgdb.cn/item/6370974f16f2c2beb1a3cb9a.jpg)
+
+     {% asset_img image-20230818231235138.png %}
    
 2. 在order-service中使用feign-api
 
@@ -1894,7 +1919,7 @@ SET FOREIGN_KEY_CHECKS = 1;
      </dependency>
      ```
      
-   - 接着修改order-service中涉及到以上三个组件的代码爆红部分
+   - 修改order-service中的所有与上述三个组件有关的import部分，改成导入feign-api中的包
    
 3. 解决包扫描问题
 
@@ -2093,7 +2118,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 
 - 下面我们以AddRequestHeader为例，作为讲解
 
-  需求：给所有进入user-service的请求都添加一个请求头：Truth=Welcome to Kyle’s Blog!
+  需求：给所有进入user-service的请求都添加一个请求头：Truth=Welcome to chinzicam’s Blog!
 
 - 只需要修改gateway服务的application.yml文件，添加路由过滤即可
 
@@ -2113,7 +2138,7 @@ SET FOREIGN_KEY_CHECKS = 1;
             predicates:
               - Path=/user/**
             filters:
-              - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 添加请求头
+              - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 添加请求头
   ```
   
 - 当前过滤器写在user-service路由下，因此仅仅对访问user-service的请求有效，我们在UserController中编写对应的方法来测试
@@ -2125,7 +2150,7 @@ SET FOREIGN_KEY_CHECKS = 1;
   }
   ```
   
-- 重启网关和user-service，打开浏览器访问http://localhost:10010/user/test， 控制台会输出`Welcome to Kyle's Blog!`，证明我们的配置已经生效
+- 重启网关和user-service，打开浏览器访问http://localhost:10010/user/test， 控制台会输出`Welcome to chinzicam's Blog!`，证明我们的配置已经生效
 
 ### 默认过滤器
 
@@ -2147,10 +2172,10 @@ SET FOREIGN_KEY_CHECKS = 1;
             predicates:
               - Path=/user/**
         default-filters: 
-          - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 添加请求头
+          - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 添加请求头
   ```
   
-- 重启网关服务，打开浏览器访问http://localhost:10010/user/test， 控制台依旧会输出`Welcome to Kyle's Blog!`，证明我们的配置已经生效
+- 重启网关服务，打开浏览器访问 http://localhost:10010/user/test ， 控制台依旧会输出`Welcome to chinzicam's Blog!`，证明我们的配置已经生效
 
 ### 小结
 
@@ -2321,13 +2346,13 @@ SET FOREIGN_KEY_CHECKS = 1;
                 predicates:
                   - Path=/user/**
                 filters:
-                  - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 1
-                  - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 2
-                  - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 3
+                  - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 1
+                  - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 2
+                  - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 3
             default-filters:
-              - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 1
-              - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 2
-              - AddRequestHeader=Truth, Welcome to Kyle's Blog! # 3
+              - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 1
+              - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 2
+              - AddRequestHeader=Truth, Welcome to chinzicam's Blog! # 3
       ```
     
   - 详细内容，可以查看源码：
