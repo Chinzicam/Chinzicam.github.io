@@ -7,7 +7,7 @@ cover: https://pic.imgdb.cn/item/64d889b01ddac507cca8156c.webp
 tags:
 - hexo
 category:
-- 后端
+- 教程
 ---
 
 ## 常用命令

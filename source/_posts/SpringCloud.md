@@ -9,13 +9,16 @@ tags:
 - Ribbon
 - Feign
 - Gateway
+- 微服务
 category:
 - 后端
 top_img: https://pic.imgdb.cn/item/64df03b9661c6c8e54d20489.jpg
 cover: https://pic.imgdb.cn/item/64df03b9661c6c8e54d20489.jpg
+swiper_index: 1
+
 ---
 
-> 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程和[Kyle](https://cyborg2077.github.io/2022/11/08/SpringCloud/)的笔记参考
+> 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程和[Kyle](https://cyborg2077.github.io)的笔记参考
 
 > 本文档对应的代码仓库 [cloud-demo](https://github.com/Chinzicam/SpringCloud_Project)
 
@@ -2000,14 +2003,15 @@ SET FOREIGN_KEY_CHECKS = 1;
          name: gateway # 服务名称
        cloud:
          nacos:
-           server-addr: localhost:80 # nacos地址（我这里还是用的nginx反向代理，你们可以启动一个单体的nacos，用8848端口）
+           server-addr: localhost:80 # nacos地址 需启动一个单体的nacos服务
          gateway:
            routes:
              - id: user-service # 路由id，自定义，只需要唯一即可
                uri: lb://user-service # 路由的目标地址，lb表示负载均衡，后面跟服务名称
-               # uri: http://localhost:8081 # 路由的目标地址，http就是固定地址
+               # uri: http://localhost:8081 # 路由的目标地址，http就是固定地址,一般使用上面那种
                predicates: # 路由断言，也就是判断请求是否符合路由规则的条件
                  - Path=/user/** # 这个是按照路径匹配，只要是以/user开头的，就符合规则
+                 
              - id: order-service # 按照上面的写法，再配置一下order-service
                uri: lb://order-service 
                predicates: 

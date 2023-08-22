@@ -171,7 +171,7 @@ envelope_comment:
     type: envelope
 
 
-algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
+# algolia搜索: https://github.com/LouisBarranqueiro/hexo-algoliasearch
 algolia:
   appId:  "P7WFMP8RIM" # see email
   apiKey: "f2cf89d78fa2c7c94e2bdf3a72e48015"  # see email

@@ -3,7 +3,7 @@ title: MybatisPlus快速上手
 date: 2023-05-07 15:04:56
 author: 橙子草
 tags:
-- Mybatis
+- MybatisPlus
 - sql
 categories: 
 - 后端
