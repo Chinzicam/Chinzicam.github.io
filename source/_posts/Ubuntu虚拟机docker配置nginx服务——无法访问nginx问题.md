@@ -1,14 +1,14 @@
 ---
 title: Ubuntu虚拟机docker配置nginx服务——无法访问nginx问题
-date: 2023-08-22 08:12:54
+date: 2023-08-20 18:12:54
 author: 橙子草
 tags:
 - Docker
 - 微服务
 category:
 - 教程
-top_img: https://pic.imgdb.cn/item/64e042c7661c6c8e5438a700.jpg
-cover: https://pic.imgdb.cn/item/64e042c7661c6c8e5438a700.jpg
+top_img: https://pic.imgdb.cn/item/64e453d6661c6c8e54ae04b5.jpg
+cover: https://pic.imgdb.cn/item/64e453d6661c6c8e54ae04b5.jpg
 ---
 
 > 参考链接：
