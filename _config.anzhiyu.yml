@@ -374,7 +374,7 @@ valine:
 waline:
   serverURL: waline-comment-flax.vercel.app # Waline server address url
   bg: # waline background
-  pageview: false
+  pageview: true
   option:
     meta: ["nick", "mail", "link"]
     locale:
@@ -505,7 +505,7 @@ footer:
           - title: algolia搜索
             link: https://dashboard.algolia.com/
           - title: leancloud评论
-            link: https://console.leancloud.cn/apps
+            link: https://console.leancloud.app/apps
           - title: Vercel托管
             link: https://vercel.com/dashboard
           - title: 开往
@@ -845,7 +845,7 @@ aside:
     color: true
     sort_order: # Don't modify the setting unless you know how it works
     highlightTags:
-      # - Hexo
+      - SpringBoot
       # - 前端
   card_archives:
     enable: true
@@ -1130,7 +1130,7 @@ nav_music:
 # 评论匿名邮箱
 visitorMail:
   enable: true
-  mail: visitor@anheyu.com
+  mail: visitor@chinzicam.com
 
 # ptool 文章底部工具
 ptool:

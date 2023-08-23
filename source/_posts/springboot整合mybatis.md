@@ -5,7 +5,7 @@ author: 橙子草
 top_img: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
 cover: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
 tags:
-- Springboot
+- SpringBoot
 - Mybatis
 categories: 
 - 后端

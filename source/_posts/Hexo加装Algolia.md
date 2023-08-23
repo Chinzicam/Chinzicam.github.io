@@ -1,5 +1,5 @@
 ---
-title: Hexo加装Algolia实现增加搜索文章功能
+title: Hexo加装Algolia
 date: 2023-08-13 19:52:18
 author: 橙子草
 tags:

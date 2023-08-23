@@ -1,5 +1,5 @@
 ---
-title: Redis基础篇
+title: Redis入门
 author: 橙子草
 date: 2023-07-18 10:40:40
 tags:
@@ -10,6 +10,8 @@ top_img: https://pic.imgdb.cn/item/64d893a91ddac507ccc06be5.webp
 cover: https://pic.imgdb.cn/item/64d893a91ddac507ccc06be5.webp
 
 ---
+
+> 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程
 
 # 一、Redis入门
 
