@@ -1,11 +1,11 @@
 ---
-title: hexo的基本使用及博客的备份迁移
+title: Hexo的基本使用及博客的备份迁移
 author: 橙子草
 date: 2022-09-10 12:36:37
 top_img: https://pic.imgdb.cn/item/64d889b01ddac507cca8156c.webp
 cover: https://pic.imgdb.cn/item/64d889b01ddac507cca8156c.webp
 tags:
-- hexo
+- Hexo
 category:
 - 教程
 ---

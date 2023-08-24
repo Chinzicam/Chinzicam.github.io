@@ -44,6 +44,13 @@
       descr: 我最近在用的一个图床
       siteshot: https://pic.imgdb.cn/item/64db33091ddac507cc5a4706.jpg
 
+    - name: 奶牛快传
+      hundredSuffix: ""
+      link: https://cowtransfer.com/
+      avatar: https://cowtransfer.com/favicon.ico
+      descr: 实用文件上传与下载
+      siteshot: https://pic.imgdb.cn/item/64e5f662661c6c8e542aeb1e.jpg
+
     - name: 熊猫图片压缩
       hundredSuffix: ""
       link: https://tinypng.com/

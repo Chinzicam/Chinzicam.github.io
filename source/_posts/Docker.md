@@ -5,6 +5,7 @@ author: 橙子草
 tags:
 - Docker
 - 微服务
+- Linxu
 category:
 - 后端
 top_img: https://pic.imgdb.cn/item/64e042c7661c6c8e5438a700.jpg
@@ -105,7 +106,9 @@ swiper_index: 2
 
 参考各大百度百科 [docker安装]([Ubuntu Docker 安装 | 菜鸟教程 (runoob.com)](https://www.runoob.com/docker/ubuntu-docker-install.html))
 
-# 常用指令
+# Docker指令
+
+### 常用指令
 
 ```bash
 #info|version
@@ -120,11 +123,9 @@ docker pull #下载镜像 docker image pull
 docker rmi #删除镜像 docker image rm
 #容器命令
 docker run 镜像id #新建容器并启动
-docker ps 列出所有运行的容器 docker container list
+docker ps 列出所有运行的容器
 docker rm 容器id #删除指定容器
-	#删除所有容器
-	docker rm -f $(docker ps -aq)  	 #删除所有的容器
-	docker ps -a -q|xargs docker rm  #删除所有的容器
+
 #启动和停止容器
 docker start 容器id	#启动容器
 docker restart 容器id	#重启容器
@@ -136,12 +137,176 @@ ctrl +P +Q  #容器不停止退出 	---注意：这个很有用的操作
 #其他常用命令
 docker run -d 镜像名  #后台启动命令
 docker logs 		#查看日志
-docker top 容器id 	#查看容器中进程信息ps
-docker inspect 容器id  #查看镜像的元数据
 docker exec 		#进入当前容器后开启一个新的终端，可以在里面操作。（常用）
-docker attach 		# 进入容器正在执行的终端
-docker cp 容器id:容器内路径  主机目的路径	#从容器内拷贝到主机上
 ```
+
+### 全部指令
+
+#### **docker信息**
+
+```bash
+systemctl start docker		#启动docker服务
+
+systemctl status docker		#查看docker服务状态
+
+docker version				#查看docker版本
+
+docker info					#查看docker容器信息
+
+docker --help				#查看docker容器帮助
+```
+
+#### **镜像管理命令**
+
+##### 1.查看本地所有镜像
+
+```bash
+docker images
+```
+
+> - REPOSITORY：镜像来自哪个仓库
+> - TAG：镜像的标签信息，版本之类的信息
+> - IMAGE ID：镜像创建时的id
+> - CREATED：镜像创建的时间
+> - SIZE：镜像文件大小
+
+##### 2.查看具体镜像命令
+
+```bash
+docker images -a			#含中间映像层
+
+docker images -q			#只显示镜像ID
+
+docker images -qa			#含中间映像层
+
+docker images --digests			#显示镜像摘要信息(DIGEST列)
+
+docker history -H ${镜像名}			#显示指定镜像的历史创建；-H：镜像大小和日期
+```
+
+##### 3.镜像搜索
+
+```bash
+docker search Oracle			#搜索仓库Oracle镜像
+
+docker search --filter=stars=600 Oracle			# --filter=stars=600：只显示 stars>=600 的镜像
+
+docker search --no-trunc Oracle				# --no-trunc 显示镜像完整 DESCRIPTION 描述
+
+docker search  --automated Oracle			# --automated ：只列出 AUTOMATED=OK 的镜像
+```
+
+##### 4.镜像下载
+
+```bash
+docker pull redis				#下载Redis官方最新镜像，相当于：docker pull redis:latest
+
+docker pull -a redis			#下载仓库所有Redis镜像
+
+docker pull bitnami/redis			#下载私人仓库镜像
+```
+
+##### 5.镜像删除
+
+```bash
+docker rmi redis			#单个镜像删除，相当于：docker rmi redis:latest
+
+docker rmi -f redis			#强制删除(针对基于镜像有运行的容器进程)
+
+docker rmi -f redis tomcat nginx		#多个镜像删除，不同镜像间以空格间隔
+```
+
+#### **容器管理**
+
+>  对于容器的操作可使用CONTAINER ID 或 NAMES
+
+##### 1.运行容器
+
+```text
+docker run -d --name=redis redis:latest
+```
+
+• run：代表启动容器
+• -d：以后台方式运行
+• --name：指定一个容器的名字，此后操作都需要使用这个名字来定位容器。
+• redis:latest：容器所使用的镜像名字
+
+##### 2.容器启动
+
+```bash
+docker start redis			#启动一个或多个已经被停止的容器
+
+docker restart redis		#重启容器
+```
+
+##### 3.查看容器
+
+```bash
+docker ps						#查看正在运行的容器
+
+docker ps -q					#查看正在运行的容器的ID
+
+docker ps -a					#查看正在运行+历史运行过的容器
+
+docker ps -s					#显示运行容器总文件大小
+```
+
+- CONTAINER ID：容器启动的id
+- IMAGE：使用哪个镜像启动的容器
+- COMMAND：启动容器的命令
+- CREATED：创建容器的时间
+- STATUS：容器启动时间
+- PORTS：容器映射到宿主机的端口
+- NAMES：容器启动的名字
+
+##### 4.容器的停止与删除
+
+```bash
+docker stop redis					#停止一个运行中的容器
+
+docker kill redis					#杀掉一个运行中的容器
+
+docker rm redis						#删除一个已停止的容器
+
+docker rm -f redis					#删除一个运行中的容器
+
+docker rm -f $(docker ps -a -q)			#删除多个容器
+docker ps -a -q | xargs docker rm 
+
+docker rm -v redis					# -v 删除容器，并删除容器挂载的数据卷
+```
+
+##### 5.容器的进入与退出
+
+```bash
+docker run -it redis /bin/bash				#使用run方式在创建时进入
+
+docker exec -it redis /bin/bash				#使用交互模式进入容器
+
+exit			#关闭容器并退出
+```
+
+##### 6.容器与主机间数据拷贝（容器外操作）
+
+```bash
+docker cp Redis:/${container_path} ${local_path}		#将Redis容器中的文件copy至本地路径
+
+docker cp ${local_path} Redis:/${container_path}/		#将主机文件copy至Redis容器
+```
+
+##### 7.查看容器日志
+
+```bash
+docker logs Redis					#查看redis容器日志
+
+docker logs --since="2023-08-21" --tail=2 redis		#查看容器redis从2021年09月15日后的最新2条日志
+
+docker logs -f -t --tail=2 redis	#查看redis最新容器日志
+```
+
+- -f ：跟踪日志输出
+- -t ：显示时间戳
+- --tail ：仅列出最新N条容器日志
 
 
 # Docker的基本操作

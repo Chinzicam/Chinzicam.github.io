@@ -1,5 +1,5 @@
 ---
-title: Ubuntu虚拟机docker配置nginx服务——无法访问nginx问题
+title: Ubuntu虚拟机docker配置镜像服务--无法访问
 date: 2023-08-20 18:12:54
 author: 橙子草
 tags:
