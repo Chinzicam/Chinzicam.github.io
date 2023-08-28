@@ -295,3 +295,6 @@ public class ConsumerTest {
   3. 使用channel声明队列
   4. 定义consumer的消费行为handleDelivery()，也就是接收到消息后要执行的业务逻辑
   5. 利用channel将消费者与队列绑定
+
+
+  ## 未完待续

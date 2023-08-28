@@ -44,13 +44,6 @@
       descr: 我最近在用的一个图床
       siteshot: https://pic.imgdb.cn/item/64db33091ddac507cc5a4706.jpg
 
-    - name: 奶牛快传
-      hundredSuffix: ""
-      link: https://cowtransfer.com/
-      avatar: https://cowtransfer.com/favicon.ico
-      descr: 实用文件上传与下载
-      siteshot: https://pic.imgdb.cn/item/64e5f662661c6c8e542aeb1e.jpg
-
     - name: 熊猫图片压缩
       hundredSuffix: ""
       link: https://tinypng.com/
@@ -64,6 +57,20 @@
       avatar: https://www.runoob.com/favicon.ico
       descr: 非常实用的教程
       siteshot: https://pic.imgdb.cn/item/64e1e8fc661c6c8e542ae3ec.jpg
+
+    - name: HelloGitHub 
+      hundredSuffix: ""
+      link: https://hellogithub.com/
+      avatar: https://hellogithub.com/favicon.ico
+      descr: 一个发现和分享有趣、入门级开源项目的平台
+      siteshot: https://pic.imgdb.cn/item/64ec2573661c6c8e54c08c5e.jpg
+
+    - name: 奶牛快传
+      hundredSuffix: ""
+      link: https://cowtransfer.com/
+      avatar: https://cowtransfer.com/favicon.ico
+      descr: 实用文件上传与下载
+      siteshot: https://pic.imgdb.cn/item/64e5f662661c6c8e542aeb1e.jpg
 
 - class_name: 推荐博客
   class_desc: 那些人，那些事

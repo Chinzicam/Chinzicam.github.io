@@ -1,5 +1,5 @@
 ---
-title: Git
+title: Git版本控制
 author: 橙子草
 date: 2022-09-11 10:40:40
 tags:
@@ -62,6 +62,74 @@ git branch -D b1 不做任何检查，强制删除
 - 
 - 用于输出当前目录所有文件及基本信息
 > alias ll='ls -al'
+
+
+#### Pull Request:
+
+- Fork 代码!
+- 创建自己的分支: git checkout -b feat/xxxx
+- 提交您的修改: git commit -am 'feat(function): add xxxxx'
+- 推送您的分支: git push origin feat/xxxx
+- 提交pull request
+
+
+#### Git忽略文件
+有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等
+解决:
+在主目录下建立".gitignore"文件，此文件有如下规则：
+1. 忽略文件中的空行或以并号（#）开始的行将会被忽略
+2. 可以使用Linux通配符。例如：星号（*）代表任意多个学符，问号（?）代表一个学符，方括号（[abc]）代表可选字符范围大括号（{string1,string2,...}）代表可选的学符串
+3. 如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略
+4. 如果名称的最前面是一个路径分隔符（／），表示要忽略的文件在此自录下，而子自录中的文件不忽略
+5. 如果名称的最后面是一个路径分隔符（／），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）
+
+例如:
+```yml
+*.txt       #忽略所有，txt结尾的文件
+!lib.txt    #但lib.txt除外
+/temp       #仅忽略项目根自录下的TODO文件，不包括其它自录temp
+build/      #忽略bui1d/自录下的所有文件
+doc/.txt    #会忽略doc/notes.txt但不包括doc/server/arch.txt
+```
+- 在上传到本地仓库时，被你忽略的文件就不会参与上传。上面是在".gitignore"文件里面写的内容示例
+
+例如:
+```yml
+# 在java中，所有的class、log、lock文件不参与提交到仓库
+*.class
+*.log
+*.lock
+
+# 在包文件中，所有的jar、war、ear文件，以及target目录下的所有文件，都不参与提交到仓库
+*.jar
+*.war
+*.ear
+target/
+
+# 在idea中，.idea目录下的所有文件，以及iml文件，都不参与提交到仓库
+.idea/
+*.iml
+
+# 在idea中，以下全部都不参与提交到仓库
+*.iml
+*.ipr
+*.iws
+.idea
+.classpath
+.project
+.settings/
+bin/
+
+# 还有一些杂七杂八的，也都不参与提交到仓库
+tmp/
+*rebel.xml*
+*velocity.log*
+.apt_generated
+.factorypath
+.springBeans
+```
+
+
 
 ----
 ### 命令大全
