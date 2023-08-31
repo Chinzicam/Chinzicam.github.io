@@ -20,7 +20,7 @@ swiper_index: 1
 
 > 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程和[Kyle](https://cyborg2077.github.io)的笔记参考
 
-> 本文档对应的代码仓库 [cloud-demo](https://github.com/Chinzicam/SpringCloud_Project)
+> 本文档对应我的GitHub仓库 [cloud-demo](https://github.com/Chinzicam/SpringCloud_Project)
 
 # 认识微服务
 

@@ -119,6 +119,7 @@ aplayer:
   asset_inject: false
 
 # 追番插件
+# 更新追番 hexo bangumi -u
 # https://github.com/HCLonely/hexo-bilibili-bangumi
 bangumi: # 追番设置
   enable: true

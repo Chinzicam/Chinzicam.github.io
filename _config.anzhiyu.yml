@@ -723,9 +723,9 @@ click_heart:
 ClickShowText:
   enable: true
   text:
+    - noop 无操作
     - Component 组件
     - Repository 仓库
-    - Autowired 自动装配
     - Qualifier 限定符
     - scope 范围
     - PropertySource 属性源
@@ -737,7 +737,6 @@ ClickShowText:
     - Resource 资源
     - Resolver 解析器
     - aside 侧边栏
-    - skip 跳过
     - include 包含
     - exclude 排除
     - modify 修改
@@ -747,7 +746,6 @@ ClickShowText:
     - privilege 权限
     - initialize 初始化
     - properly 正确地
-    - info 信息
     - cast 转换
     - transfer 转换
     - convert 转换
@@ -755,7 +753,6 @@ ClickShowText:
     - proxy 代理
     - target 目标
     - reflect 反射
-    - core 核心
     - aspect 切面
     - ref 引用
     - Platform 平台
@@ -763,10 +760,6 @@ ClickShowText:
     - Manager 管理器
     - attributes 属性
     - properties 属性
-    - tx 事务
-    - commit 提交
-    - config 配置
-    - result 结果
     - development 开发
     - pool 池
     - parameter 参数
@@ -774,7 +767,6 @@ ClickShowText:
     - condition 条件
     - collection 集合
     - array 数组
-    - close 关闭
     - item 项目
     - separator 分隔符
     - dialect 方言
@@ -790,7 +782,6 @@ ClickShowText:
     - implementation 实现类
     - annotation 注解
     - Processor 处理器
-    - scan 扫描
     - entity 实体
     - pojo 实体类
     - extraction 抽取
@@ -813,21 +804,17 @@ ClickShowText:
     - variables 变量
     - environment 环境
     - bak 备份
-    - deploy 部署
     - Canonical 规范的
     - separated 分隔符
     - lowercase 小写字母
     - contains 包括
     - characters 字符
-    - must 必须
     - mock 虚拟
     - perform 执行
     - delay 延迟
-    - normal 正常
     - abnormal 异常
     - ResultSet 结果集
     - embedded 内置的
-    - cache 缓存
     - encryption 加密
     - remote 远程
     - section 部分
@@ -871,8 +858,6 @@ ClickShowText:
     - delegate 委托
     - record 记录
     - timestamp 时间戳
-    - task 任务
-    - init 初始化
     - notify 通知
     - Runable 可运行的
     - Throwable 可抛出的
@@ -880,7 +865,6 @@ ClickShowText:
     - member 成员
     - design 设计
     - execute 执行
-    - engine 引擎
     - process 处理
     - heartbeat 心跳
     - schedule 定时器
@@ -889,7 +873,6 @@ ClickShowText:
     - optional 可选的
     - receive 接收
     - event 事件
-    - prepare 准备
     - chain 链
     - flow 流量
     - statistic 统计

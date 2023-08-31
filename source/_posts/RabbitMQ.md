@@ -14,7 +14,7 @@ cover: https://pic.imgdb.cn/item/64e49ff9661c6c8e54c9c55c.jpg
 
 > 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程
 
-> 本文对应的[GitHub仓库地址](https://github.com/Chinzicam/RabbitMQ_Project)
+> 本文对应的我的[GitHub仓库地址](https://github.com/Chinzicam/RabbitMQ_Project)
 
 # 初识MQ
 
