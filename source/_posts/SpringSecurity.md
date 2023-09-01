@@ -4,6 +4,9 @@ date: 2023-08-28 13:26:49
 author: 橙子草
 tags:
 - SpringSecurity
+- 跨域
+- 自定义异常处理
+- jwt
 category:
 - 后端
 top_img: https://pic.imgdb.cn/item/64e74de0661c6c8e54ba7635.jpg
@@ -13,6 +16,7 @@ cover: https://pic.imgdb.cn/item/64e74de0661c6c8e54ba7635.jpg
 
 > 本文档对应我的GitHub项目地址:[SpringSecurity](https://github.com/Chinzicam/SpringSecurity_Project)
 
+> 本文档参考此[课程](https://www.bilibili.com/video/BV1mm4y1X7Hc/?spm_id_from=333.337.search-card.all.click)所编写
 
 ## 快速入门
 
@@ -127,7 +131,7 @@ public class HelloController {
 
 - 在idea控制台查看登录的密码，用户名是user
 
-{%asset_img image-20230828202551316.png%}
+{% asset_img image-20230828202551316.png%}
 
 登录之后，就会自动跳到并访问下面的地址
 
@@ -141,14 +145,14 @@ http://localhost:13848/hello/world
 http://localhost:13848/logout
 ```
 
-{%asset_img image-20230828202641402.png %}
+{% asset_img image-20230828202641402.png %}
 ## 认证
 
 springsecurity的权限管理，是`先授权后认证`
 
 流程图如下
 
-{%asset_img 1689586875709-6eb3d7ed-ee86-4245-9b5f-5bbe49b7144b.jpg %}
+{% asset_img 1689586875709-6eb3d7ed-ee86-4245-9b5f-5bbe49b7144b.jpg %}
 
 ### 1. springsecurity原理
 
@@ -156,7 +160,7 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 > 监听器 -> 过滤器链 -> dispatcherservlet(前置拦截器 -> mapperHandle -> 后置拦截器 -> 最终拦截器)
 
-{%asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
+{% asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
 
 图中只展示了核心过滤器，其它的非核心过滤器并没有在图中展示。
 
@@ -180,7 +184,7 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 - UserDetails接口：提供核心用户信息。通过UserDetailsService根据用户名获取处理的用户信息要封装成UserDetails对象返回。然后将这些信息封装到Authentication对象中。
 
-{%asset_img 1689586876374-c2b3efaa-da08-48b1-85b9-f862639ddf9d.jpg %}
+{% asset_img 1689586876374-c2b3efaa-da08-48b1-85b9-f862639ddf9d.jpg %}
 
 ### 3. 自定义认证思路
 
@@ -300,7 +304,7 @@ SpringSecurity的原理其实就是一个过滤器链，内部包含了提供各
 
 ##### 准备工具类
 
-###### 新建启动类TokenApplication
+- 新建启动类TokenApplication
 
 ```java
 /**
@@ -316,7 +320,7 @@ public class TokenApplication {
 
 ```
 
-###### 新建Controller类HelloController
+- 新建Controller类HelloController
 
 ```java
 /**
@@ -334,7 +338,7 @@ public class HelloController {
 }
 ```
 
-###### 目录下新建 utils.FastJsonRedisSerializer 类
+- 目录下新建 utils.FastJsonRedisSerializer 类
 
 ```java
 /**
@@ -389,7 +393,7 @@ public class FastJsonRedisSerializer<T> implements RedisSerializer<T> {
 
 ```
 
-###### 目录新建 config.RedisConfig 类
+- 目录新建 config.RedisConfig 类
 
 ```java
 /**
@@ -422,7 +426,7 @@ public class RedisConfig {
 
 ```
 
-###### 目录新建 common.ResponseResult 类
+- 目录新建 common.ResponseResult 类
 
 ```java
 /**
@@ -487,7 +491,7 @@ public class ResponseResult<T> {
 
 ```
 
-###### 在 utils 目录新建 JwtUtil 类
+- 在 utils 目录新建 JwtUtil 类
 
 ```java
 /**
@@ -591,7 +595,7 @@ public class JwtUtil {
 
 ```
 
-###### 在 utils 目录新建 RedisCache 类
+- 在 utils 目录新建 RedisCache 类
 
 ```java
 /**
@@ -807,7 +811,7 @@ public class RedisCache {
 }
 ```
 
-###### 在 utils 目录新建 WebUtils 类
+- 在 utils 目录新建 WebUtils 类
 
 ```java
 /**
@@ -838,7 +842,7 @@ public class WebUtils {
 }
 ```
 
-###### 在 entity目录新建 User类
+- 在 entity目录新建 User类
 
 ```java
 /**
@@ -917,7 +921,7 @@ public class User implements Serializable {
 
 以上均为工具类，之后会用上，最后的代码结构如下
 
-{%asset_img image-20230831151606054.png %}
+{% asset_img image-20230831151606054.png %}
 
 ##### 准备数据库
 
@@ -1453,7 +1457,7 @@ public class LoginController {
 
 - 进行postman测试，观察authenticate的存储结构
 
-{%asset_img image-20230830163940627.png %}
+{% asset_img image-20230830163940627.png %}
 
 
 
@@ -1475,7 +1479,7 @@ public class LoginController {
 localhost:13848/user/login
 ```
 
-{%asset_img image-20230831154920591.png %}
+{% asset_img image-20230831154920591.png %}
 
 - 登录成功，测试通过
 
@@ -1569,7 +1573,9 @@ localhost:13848/user/login
 
 - 测试。继续在你的postman，发送如下GET请求，复制刚刚的token值，去访问我们的业务接口，看会不会被Security拦截，如果不会拦截，那么就说明认证过滤器生效了，使用场景就是简单理解就是登录过的用户可以访问我们的业务接口，拿到对应的资源
 
-{%asset_img image-20230830195633181.png %}
+
+{% asset_img image-20230830195633181.png %}
+
 
 本节的gpt问答（这是JwtAuthenticationTokenFilter 类里的）
 
@@ -1664,11 +1670,11 @@ http://localhost:8080/user/logout
 
 注意还要带上你刚刚复制的token值，粘贴到消息头的Value输入框
 
-{%asset_img image-20230830200601321.png %}
+{% asset_img image-20230830200601321.png %}
 
 - 注销账号后，再次访问hello/world接口，报错
 
-{%asset_img image-20230830200626122.png %}
+{% asset_img image-20230830200626122.png %}
 
 ------
 
@@ -1692,7 +1698,7 @@ http://localhost:8080/user/logout
 
 ​	然后设置我们的资源所需要的权限即可。
 
-{%asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
+{% asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
 
 ### 3. 自定义访问路径的权限
 
@@ -1867,9 +1873,9 @@ http://localhost:13848/hello
 
 - 测试。把第八步的测试再做一遍，看还能访问吗
 
-{%asset_img 1689586881656-f2ae9ef0-3b4a-4925-a1e8-4703f823dd64.jpg %}
+{% asset_img 1689586881656-f2ae9ef0-3b4a-4925-a1e8-4703f823dd64.jpg %}
 
-{%asset_img 1689586881827-d78fcba9-cba0-4438-b785-34d0198df16f.jpg %}
+{% asset_img 1689586881827-d78fcba9-cba0-4438-b785-34d0198df16f.jpg %}
 
 ## 授权-RBAC权限模型
 
@@ -1877,7 +1883,7 @@ http://localhost:13848/hello
 
 RBAC权限模型（Role-Based Access Control）即：基于角色的权限控制。这是目前最常被开发者使用也是相对易用、通用权限模型。
 
-{%asset_img image-20211222110249727.png %}
+{% asset_img image-20211222110249727.png %}
 
 该模型由以下五个主要组成部分构成:
 
@@ -2165,7 +2171,7 @@ public void testSelectPermsByUserId(){
 
 ​	所以如果我们需要自定义异常处理，我们只需要自定义`AuthenticationEntryPoint`和`AccessDeniedHandler`然后配置给SpringSecurity即可。
 
-{%asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
+{% asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
 
 ---
 
@@ -2347,7 +2353,7 @@ http://localhost:8080/#/login
 
 我们前面都是使用@PreAuthorize注解，然后在在其中使用的是hasAuthority方法进行校验。SpringSecurity还为我们提供了其它方法例如: hasAnyAuthority，hasRole，hasAnyRole等
 
-{%asset_img 1689586885641-4820f97f-07ee-45af-b4a4-286ca3831125.jpg %}
+{% asset_img 1689586885641-4820f97f-07ee-45af-b4a4-286ca3831125.jpg %}
 
 @PreAuthorize注解是Spring Security提供的一种基于表达式的权限控制注解，用于在方法上进行权限校验。它可以在方法执行前对用户的权限进行校验，只有满足指定条件的用户才能执行该方法。
 
@@ -2454,6 +2460,53 @@ public class HelloController {
 
 ```
 
+---
+
+`本章gpt问答`
+
+> 介绍一下@PreAuthorize注解，还有SpringSecurity的其它方法例如: hasAnyAuthority，hasRole，hasAnyRole等
+
+@PreAuthorize 注解是 Spring Security 框架提供的一种用于方法级别的访问控制注解。通过在方法上添加 @PreAuthorize 注解，我们可以定义一个 SpEL (Spring Expression Language) 表达式来进行权限验证。只有满足 SpEL 表达式条件的用户才能够调用该方法。
+
+以下是 @PreAuthorize 注解的使用示例：
+
+```java
+@PreAuthorize("hasRole('ROLE_ADMIN')")
+public void deleteArticle(int articleId) {
+    // 删除文章的业务逻辑
+}
+```
+在上述示例中，deleteArticle() 方法被 @PreAuthorize 注解修饰，并指定了一个 SpEL 表达式 "hasRole('ROLE_ADMIN')"。这个表达式表示只有拥有 "ROLE_ADMIN" 角色的用户才能够调用该方法。
+
+除了 @PreAuthorize 注解，Spring Security 还提供了其他常用的权限验证方法，包括：
+
+hasAnyAuthority：检查用户是否具有给定权限中的任意一个。
+```java
+@PreAuthorize("hasAnyAuthority('PERM_READ', 'PERM_WRITE')")
+public void performAction() {
+    // 执行操作的业务逻辑
+}
+```
+hasRole：检查用户是否具有指定角色。
+```java
+@PreAuthorize("hasRole('ROLE_ADMIN')")
+public void deleteArticle(int articleId) {
+    // 删除文章的业务逻辑
+}
+```
+hasAnyRole：检查用户是否具有给定角色中的任意一个。
+```java
+@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_EDITOR')")
+public void createArticle(Article article) {
+    // 创建文章的业务逻辑
+}
+```
+这些方法都可以接受一个或多个参数，并支持对应角色或权限的表达式。
+
+需要注意的是，使用这些注解进行权限控制前，请确保已经正确配置了 Spring Security，并且用户、角色、权限等相关信息已经存储在合适的地方（如数据库），并且进行了正确的认证和授权配置。
+
+---
+
 ### 基于配置的权限控制
 
 前面学习的权限控制是基于@PreAuthorize注解来完成的，如何使用配置的方式，也就是在配置类当中，来实现权限控制，如下
@@ -2487,7 +2540,7 @@ http..csrf().disable(); //关闭csrf，可防护csrf攻击。如果不关闭的�
 
 CSRF是指跨站请求伪造（Cross-site request forgery），是web常见的攻击之一，如图
 
-{%asset_img 1689586888852-2edfebdb-9d54-4bce-8501-6f698d2e29ab.jpg %}
+{% asset_img 1689586888852-2edfebdb-9d54-4bce-8501-6f698d2e29ab.jpg %}
 
 可以参考以下文章：[CSRF攻击与防御](https://blog.csdn.net/freeking101/article/details/86537087)
 
@@ -2505,7 +2558,7 @@ successHandler表示 '登录认证成功的处理器'
 
 实际上在UsernamePasswordAuthenticationFilter进行登录认证的时候，如果登录成功了是会调用AuthenticationSuccessHandler的方法进行认证成功后的处理的。AuthenticationSuccessHandler就是登录成功处理器。我们也可以自己去自定义成功处理器进行成功后的相应处理
 
-{%asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
+{% asset_img 1689586875966-f65f8796-6a23-4978-bfe1-ee7bc9eb3f8c.jpg %}
 
 具体操作如下
 

@@ -8,7 +8,7 @@ tags:
 - Oracle
 - sql
 categories: 
-- 后端
+- 教程
 
 ---
 
