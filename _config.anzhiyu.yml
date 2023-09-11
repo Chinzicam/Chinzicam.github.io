@@ -10,7 +10,7 @@ menu:
     留言板: /comments/ || anzhiyu-icon-envelope
 
   我的:
-    音乐馆: /music/?id=7699805683&server=tencent || anzhiyu-icon-music
+    音乐馆: /music/?id=7345535407&server=tencent || anzhiyu-icon-music
     追番页: /bangumis/ || anzhiyu-icon-bilibili
     相册集: /album/ || anzhiyu-icon-images
     # 小空调: /air-conditioner/ || anzhiyu-icon-fan
@@ -190,8 +190,8 @@ cover:
   position: left
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - https://pic.imgdb.cn/item/64d88cb41ddac507ccaf415b.webp
-    - https://pic.imgdb.cn/item/64d88a7d1ddac507ccaa08bf.webp
+    - https://pic.imgdb.cn/item/64e49ff9661c6c8e54c9c55c.jpg
+    - https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -275,10 +275,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+    - img: https://img1.imgtp.com/2023/09/02/18Hxkx9J.jpg
       link:
       text: wechat
-    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+    - img: https://img1.imgtp.com/2023/09/02/AHpZH2PY.jpg
       link:
       text: alipay
 
@@ -979,7 +979,7 @@ aside:
     enable: true
     content: 欢迎来看我的小破站鸭~
   card_weixin:
-    enable: true
+    enable: false
     face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
     backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
   card_recent_post:

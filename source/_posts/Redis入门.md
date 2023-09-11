@@ -13,6 +13,8 @@ cover: https://pic.imgdb.cn/item/64d893a91ddac507ccc06be5.webp
 
 > 在此特别感谢[黑马程序员](https://www.bilibili.com/video/BV1LQ4y127n4)提供的课程
 
+> 本文档需对应此课程食用~
+
 # 一、Redis入门
 
 ## 1.认识NoSQL

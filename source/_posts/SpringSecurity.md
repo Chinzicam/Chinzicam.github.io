@@ -9,14 +9,17 @@ tags:
 - jwt
 category:
 - 后端
-top_img: https://pic.imgdb.cn/item/64e74de0661c6c8e54ba7635.jpg
-cover: https://pic.imgdb.cn/item/64e74de0661c6c8e54ba7635.jpg
-
+top_img: https://pic.imgdb.cn/item/64f4929c661c6c8e5419167e.webp
+cover: https://pic.imgdb.cn/item/64f4929c661c6c8e5419167e.webp
 ---
 
 > 本文档对应我的GitHub项目地址:[SpringSecurity](https://github.com/Chinzicam/SpringSecurity_Project)
 
-> 本文档参考此[课程](https://www.bilibili.com/video/BV1mm4y1X7Hc/?spm_id_from=333.337.search-card.all.click)所编写
+> 本文档需对应此[课程](https://www.bilibili.com/video/BV1mm4y1X7Hc/?spm_id_from=333.337.search-card.all.click)食用~
+
+{% btns rounded grid5 %}
+{% cell GitHub仓库, https://github.com/Chinzicam/SpringSecurity_Project, anzhiyufont anzhiyu-icon-book %}
+{% endbtns %}
 
 ## 快速入门
 

@@ -14,6 +14,8 @@ cover: https://pic.imgdb.cn/item/64d8c1821ddac507cc24012f.png
 
 > 对应视频教程 [骑砍二控制台教程](https://www.bilibili.com/video/BV1iY411f76m)
 
+> 本文档创建日期为`2022-10-31 10:40:40`，不保证时效性~
+
 
 ##  **骑砍2 控制台整理**
 
@@ -28,6 +30,7 @@ cover: https://pic.imgdb.cn/item/64d8c1821ddac507cc24012f.png
 ### 1. 开启/关闭作弊
 
 ```java
+~在tab上面，Esc的下面，alt+~两个一起按才能呼出控制台
 打开游戏在任意界面Alt+~呼出控制台，输入config.cheat_mode 1,然后回车确认
 想要关闭作弊模式的话输入config.cheat_mode 0就行
 ```
@@ -67,10 +70,12 @@ ctrl+alt+F3           击晕所有友军
 ```java
 输入help可获取全部控制台命令
 ```
+
 ####  游戏相关
 
 - add系列
-```c
+
+```java
 加钱  --> campaign.add_gold_to_hero 数字
 加科西亚马 --> campaign.add_horse 数量 
 加属性点 -->	campaign.add_attribute_points_to_hero 英文全名 数字  		(不打名字只写数字就是给主角加)
@@ -119,3 +124,18 @@ ctrl+alt+F3           击晕所有友军
 别人向你开战 -> campaign.start_player_vs_world_war
 ```
 
+- 评论区补充内容
+
+> 解锁全部部件：campaign.unlock_all_crafting_pieces
+
+> 加交易经验：campaign.add_skill_xp_hexo trade+数值
+
+> 获取特定物品：campaign.give_item_to_main_party 物品英文名 数量 
+
+> 改指定英雄的文化：campaign.set_hero_culture+英雄名+文化名
+
+> 修改好感度 campaign.change_hero_relation+数值+名字或者all
+
+> 直接给俘虏加xp（相当于加速招募俘虏）Campaign.give_prisoners_xp+数值
+
+> 修改主角年龄 campaign.set_main_hero_age+年龄

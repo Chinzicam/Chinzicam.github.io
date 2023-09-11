@@ -11,8 +11,11 @@ top_img: https://pic.imgdb.cn/item/64d88e291ddac507ccb3415e.webp
 cover: https://pic.imgdb.cn/item/64d88e291ddac507ccb3415e.webp
 ---
 
-> > 本文档对应我的GitHub仓库 [Mybatis_PlusStudy](https://github.com/Chinzicam/Mybatis_PlusStudy)
+>  本文档对应我的GitHub仓库 [Mybatis_PlusStudy](https://github.com/Chinzicam/Mybatis_PlusStudy)
 
+{% btns rounded grid5 %}
+{% cell GitHub仓库, https://github.com/Chinzicam/Mybatis_PlusStudy, anzhiyufont anzhiyu-icon-book %}
+{% endbtns %}
 ## Mybatis_Plus简单使用
 
 ### 简介
