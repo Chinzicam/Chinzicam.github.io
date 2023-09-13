@@ -19,7 +19,7 @@ cover: https://pic.imgdb.cn/item/64d8933f1ddac507ccbf839f.webp
 
 {% asset_img image-20220725172038979.png %}
 
-答案就是使用`Mybatis Plus`提供的[公共字段自动填充功能]([自动填充功能 | MyBatis-Plus (baomidou.com)](https://baomidou.com/pages/4c6bcf/))。
+答案就是使用**Mybatis Plus**提供的[公共字段自动填充功能]([自动填充功能 | MyBatis-Plus (baomidou.com)](https://baomidou.com/pages/4c6bcf/))。
 
 ## 2.实现步骤
 
@@ -27,7 +27,7 @@ cover: https://pic.imgdb.cn/item/64d8933f1ddac507ccbf839f.webp
 
 **实现步骤：**
 
-- 在实体类的属性上加入`@TableField`注解，指定自动填充的策略
+- 在实体类的属性上加入**@TableField**注解，指定自动填充的策略
 
   ```java
   @TableField(fill = FieldFill.INSERT)//插入时填充字段
@@ -43,7 +43,7 @@ cover: https://pic.imgdb.cn/item/64d8933f1ddac507ccbf839f.webp
   private Long updateUser;
   ```
 
-- 按照框架要求编写元数据对象处理器，在此类中统一为公共字段赋值，此类需要实现`MetaObjectHandler`接口
+- 按照框架要求编写元数据对象处理器，在此类中统一为公共字段赋值，此类需要实现**MetaObjectHandler**接口
 
   ```
   package com.czc.common;

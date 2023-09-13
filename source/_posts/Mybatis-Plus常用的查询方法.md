@@ -37,7 +37,7 @@ eq(boolean condition, R column, Object val)
 ```
 
 - 等于 =
-- 例: `eq("name", "老王")`--->`name = '老王'`
+- 例: **eq("name", "老王")**--->**name = '老王'**
 
 ---
 
@@ -49,7 +49,7 @@ gt(boolean condition, R column, Object val)
 ```
 
 - 大于 >
-- 例: `gt("age", 18)`--->`age > 18`
+- 例: **gt("age", 18)**--->**age > 18**
 
 ---
 
@@ -61,7 +61,7 @@ lt(boolean condition, R column, Object val)
 ```
 
 - 小于 <
-- 例: `lt("age", 18)`--->`age < 18`
+- 例: **lt("age", 18)**--->**age < 18**
 
 ---
 
@@ -73,7 +73,7 @@ between(boolean condition, R column, Object val1, Object val2)
 ```
 
 - BETWEEN 值1 AND 值2
-- 例: `between("age", 18, 30)`--->`age between 18 and 30`
+- 例: **between("age", 18, 30)**--->**age between 18 and 30**
 
 ---
 
@@ -85,7 +85,7 @@ like(boolean condition, R column, Object val)
 ```
 
 - LIKE '%值%'
-- 例: `like("name", "王")`--->`name like '%王%'`
+- 例: **like("name", "王")**--->**name like '%王%'**
 
 ---
 
@@ -97,7 +97,7 @@ in(boolean condition, R column, Collection<?> value)
 ```
 
 - 字段 IN (value.get(0), value.get(1), ...)
-- 例: `in("age",{1,2,3})`--->`age in (1,2,3)`
+- 例: **in("age",{1,2,3})**--->**age in (1,2,3)**
 
 ```java
 in(R column, Object... values)
@@ -105,7 +105,7 @@ in(boolean condition, R column, Object... values)
 ```
 
 - 字段 IN (v0, v1, ...)
-- 例: `in("age", 1, 2, 3)`--->`age in (1,2,3)`
+- 例: **in("age", 1, 2, 3)**--->**age in (1,2,3)**
 
 ---
 
@@ -117,8 +117,8 @@ inSql(boolean condition, R column, String inValue)
 ```
 
 - 字段 IN ( sql语句 )
-- 例: `inSql("age", "1,2,3,4,5,6")`--->`age in (1,2,3,4,5,6)`
-- 例: `inSql("id", "select id from table where id < 3")`--->`id in (select id from table where id < 3)`
+- 例: **inSql("age", "1,2,3,4,5,6")**--->**age in (1,2,3,4,5,6)**
+- 例: **inSql("id", "select id from table where id < 3")**--->**id in (select id from table where id < 3)**
 
 ---
 
@@ -130,7 +130,7 @@ groupBy(boolean condition, R... columns)
 ```
 
 - 分组：GROUP BY 字段, ...
-- 例: `groupBy("id", "name")`--->`group by id,name`
+- 例: **groupBy("id", "name")**--->**group by id,name**
 
 ---
 
@@ -142,7 +142,7 @@ orderByDesc(boolean condition, R... columns)
 ```
 
 - 排序：ORDER BY 字段, ... DESC
-- 例: `orderByDesc("id", "name")`--->`order by id DESC,name DESC`
+- 例: **orderByDesc("id", "name")**--->**order by id DESC,name DESC**
 
 ---
 
