@@ -185,12 +185,12 @@ Maven的坐标是用于唯一标识一个项目或者一个构件（artifact）�
 
 {% folding  , 讲一下什么是Spirng？ %}
 
-- Spring是一个轻量级的IoC和AOP容器框架。是为Java应用程序提供基础性服务的一套框架，目的是用于简化企业应用程序的开发。Spring的核心思想是通过依赖注入和面向切面编程来实现松耦合、可测试和易维护的应用程序
+- Spring是一个轻量级的IOC和AOP容器框架。是为Java应用程序提供基础性服务的一套框架，目的是用于简化企业应用程序的开发。Spring的核心思想是通过依赖注入和面向切面编程来实现松耦合、可测试和易维护的应用程序
 Spring框架提供了许多核心功能，包括
 
-**控制反转(Inversion of Control, IoC)** ：
+**控制反转(Inversion of Control, IOC)** ：
 
-> 讲对象的创建和依赖关系的管理交给框架来完成，使得应用程序更加松耦合
+> 将对象的创建和依赖关系的管理交给框架来完成，使得应用程序更加松耦合
 
 **依赖注入(Dependency Injection, DI)** ：
 
@@ -291,7 +291,7 @@ Spring框架提供了许多核心功能，包括
 
 
 
-{% folding , 说说你对Spring的IoC是怎么理解的 %}
+{% folding , 说说你对Spring的IOC是怎么理解的 %}
 
 - Spring的IOC(Inversion of Control)是指将对对象的创建、组装、管理的责任交给容器，由容器负责对象之间的依赖关系。在IOC模式中，对象不再自己管理其他对象的依赖，而是将依赖关系反转给容器进行管理
 - 在Spring中，IOC是通过依赖注入(Dependency Injection, DI)实现的，依赖注入是指容器通过自动或者手动的方式，将对象所依赖的其他对象或者资源注入到对象中，从而达到对象之间的松耦合。
@@ -521,7 +521,7 @@ SQL优化是指对数据库中的SQL语句进行调整和优化，以提高查�
   1. **@Configuration**：声明当前类是一个配置类
   2. **@EnableAutoConfiguration**：开启SpringBoot的自动配置功能
   3. **@ComponentScan**：开启组件扫描，会自动扫描当前包及其子包下的所有类，并注册为Spring的Bean
-- 这三个注解组合在一起，可以让SpringBoot自动配置并启动应用程序。除此之外，SpringBoot还有很多其他注解，如 **@RestController** 、**@Service**、**@Repository**等，它们可以帮助我们更方便地创建控制器、服务层、数据访问层等组件
+- 这三个注解组合在一起，可以让SpringBoot自动配置并启动应用程序。除此之外，SpringBoot还有很多其他注解，如 **@RestController** 、  **@Service** 、 **@Repository** 等，它们可以帮助我们更方便地创建控制器、服务层、数据访问层等组件
 
 {% endfolding %}
 
