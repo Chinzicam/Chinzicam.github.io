@@ -10,15 +10,12 @@ top_img: https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 cover: https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 ---
 
-> 笔记内容待上传
-
-
 
 在[官网](https://elasticsearch.cn/download/)下载自己所需要的版本,找到bat以管理员启动即可
 
 
 
-**es概括**
+**ES概括**
 
 Elaticsearch，简称为 ES， ES 是一个开源的高扩展的分布式全文搜索引擎，Elasticsearch 是面向文档型[数据库](https://cloud.tencent.com/solution/database?from_column=20065&from=20065)，一条数据在这里就是一个文档。
 
@@ -34,7 +31,7 @@ ES是一个文档型数据库，在与传统的[关系型数据库](https://clou
 
 ### **创建索引**
 
-向 ES 服务器发 PUT 请求 ： `http://127.0.0.1:9200/shopping`。创建索引只能使用PUT请求，PUT是幂等性的，也就是说不存在的时候就会创建，存在的时候就不会重新创建而是返回索引已经存在的信息。
+向 ES 服务器发 PUT 请求 ： `http://127.0.0.1:9200/shopping`。创建索引只能使用 **PUT请求** ，PUT是幂等性的，也就是说不存在的时候就会创建，存在的时候就不会重新创建而是返回索引已经存在的信息。
 
 ```javascript
 {
@@ -48,7 +45,7 @@ ES是一个文档型数据库，在与传统的[关系型数据库](https://clou
 
 ### **查询索引**
 
-向 ES 服务器发 GET 请求 ： `http://127.0.0.1:9200/shopping`。
+向 ES 服务器发 **GET 请求** ： `http://127.0.0.1:9200/shopping`。
 
 ```javascript
 {
@@ -75,7 +72,7 @@ ES是一个文档型数据库，在与传统的[关系型数据库](https://clou
 
 ### **查看所有索引**
 
-向 ES 服务器发 GET 请求 ： `http://127.0.0.1:9200/_cat/indices?v`。
+向 ES 服务器发 **GET 请求** ： `http://127.0.0.1:9200/_cat/indices?v`。
 
 这里请求路径中的_cat 表示查看的意思， indices 表示索引，所以整体含义就是查看当前 ES服务器中的所有索引，就好像 [MySQL](https://cloud.tencent.com/product/cdb?from_column=20065&from=20065) 中的 show tables 的感觉，服务器响应结果如下 :
 
@@ -88,7 +85,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **删除索引**
 
-向 ES 服务器发 DELETE 请求 ： `http://127.0.0.1:9200/shopping`。
+向 ES 服务器发 **DELETE 请求** ： `http://127.0.0.1:9200/shopping`。
 
 返回结果如下：
 
@@ -106,7 +103,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 假设索引已经创建好了，接下来我们来创建文档，并添加数据。这里的文档可以类比为关系型数据库中的表数据，添加的数据格式为 JSON 格式
 
-在 Postman 中，向 ES 服务器发 POST 请求 ： `http://127.0.0.1:9200/shopping/_doc`，请求体JSON内容为：
+在 Postman 中，向 ES 服务器发 **POST 请求** ： `http://127.0.0.1:9200/shopping/_doc`，请求体JSON内容为：
 
 ```javascript
 {
@@ -180,7 +177,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **文档查询**
 
-查看文档时，需要指明文档的唯一性标识，类似于 MySQL 中数据的主键查询 在 Postman 中，向 ES 服务器发 GET 请求 ： `http://127.0.0.1:9200/shopping/_doc/1` 。
+查看文档时，需要指明文档的唯一性标识，类似于 MySQL 中数据的主键查询 在 Postman 中，向 ES 服务器发 **GET 请求** ： `http://127.0.0.1:9200/shopping/_doc/1` 。
 
 返回结果如下：
 
@@ -204,7 +201,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
  
 
-查找不存在的内容，向 ES 服务器发 GET 请求 ：http://127.0.0.1:9200/shopping/_doc/1001。返回结果如下：
+查找不存在的内容，向 ES 服务器发 **GET 请求** ：`http://127.0.0.1:9200/shopping/_doc/1001` 。返回结果如下：
 
 ```javascript
 {
@@ -217,7 +214,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
  
 
-查看索引下所有数据，向 ES 服务器发 GET 请求 ： `http://127.0.0.1:9200/shopping/_search`。
+查看索引下所有数据，向 ES 服务器发 **GET 请求** ： `http://127.0.0.1:9200/shopping/_search`。
 
 返回结果如下：
 
@@ -273,7 +270,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 删除一个文档不会立即从磁盘上移除，它只是被标记成已删除（逻辑删除）。
 
-在 Postman 中，向 ES 服务器发 DELETE 请求 ： `http://127.0.0.1:9200/shopping/_doc/1` 返回结果：
+在 Postman 中，向 ES 服务器发 **DELETE 请求** ： `http://127.0.0.1:9200/shopping/_doc/1` 返回结果：
 
 ```javascript
 {
@@ -300,7 +297,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 和新增文档一样，输入相同的 URL 地址请求，如果请求体变化，会将原有的数据内容覆盖
 
-在 Postman 中，向 ES 服务器发 POST 请求 ： `http://127.0.0.1:9200/shopping/_doc/1` 请求体JSON内容为:
+在 Postman 中，向 ES 服务器发 **POST 请求** ： `http://127.0.0.1:9200/shopping/_doc/1` 请求体JSON内容为:
 
 ```javascript
 {
@@ -338,7 +335,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 修改数据时，也可以只修改某一给条数据的局部信息
 
-在 Postman 中，向 ES 服务器发 POST 请求 ： `http://127.0.0.1:9200/shopping/_update/1`。
+在 Postman 中，向 ES 服务器发 **POST 请求** ： `http://127.0.0.1:9200/shopping/_update/1`。
 
 请求体JSON内容为:
 
@@ -374,9 +371,9 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
  
 
-### **URL待条件查询**
+### **URL带条件查询**
 
-查找category为小米的文档，在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search?q=category:小米`，返回结果如下：
+查找category为小米的文档，在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search?q=category:小米`，返回结果如下：
 
 ```javascript
 {
@@ -419,7 +416,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **请求体带参查询**
 
-接下带JSON请求体，还是查找category为小米的文档，在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+接下带JSON请求体，还是查找category为小米的文档，在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
 
 ```javascript
 {
@@ -474,7 +471,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 #### **带请求体方式的查找所有内容**
 
-查找所有文档内容，也可以这样，在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下
+查找所有文档内容，也可以这样，在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下
 
 ```javascript
 {
@@ -527,7 +524,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **查询指定字段**
 
-如果你想查询指定字段，在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+如果你想查询指定字段，在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
 
 ```javascript
 {
@@ -578,7 +575,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **分页查询**
 
-在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
 
 ```javascript
 {
@@ -590,7 +587,9 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
+> **from** 代表起始页， **size** 代表页的大小
+>
+> 计算公式： 起始页 =（页码-1）* 每页数据条数 ，即 from=（页码-1）* size
 
 返回结果如下：
 
@@ -632,7 +631,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **查询排序**
 
-如果你想通过排序查出价格最高的手机，在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+如果你想通过排序查出价格最高的手机，在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
 
 ```javascript
 {
@@ -693,7 +692,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **多条件查询**
 
-假设想找出小米牌子，价格为3999元的。（must相当于数据库的&&）,在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+假设想找出小米牌子，价格为3999元的。（must相当于数据库的&&）,在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
@@ -753,30 +752,33 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
  
 
-假设想找出小米和华为的牌子。（should相当于数据库的||）在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+假设想找出小米和华为的牌子。（should相当于数据库的||）在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
- "query":{
-  "bool":{
-   "should":[{
-    "match":{
-     "category":"小米"
-    }
-   },{
-    "match":{
-     "category":"华为"
-    }
-   }]
-  },
-        "filter":{
-            "range":{
-                "price":{
-                    "gt":2000
+    "query": {
+        "bool": {
+            "should": [
+                {
+                    "match": {
+                        "category": "小米"
+                    }
+                },
+                {
+                    "match": {
+                        "category": "华为"
+                    }
+                }
+            ],
+            "filter": {
+                "range": {
+                    "price": {
+                        "gt": 2000
+                    }
                 }
             }
         }
- }
+    }
 }
 ```
 
@@ -823,7 +825,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **范围查询**
 
-假设想找出小米和华为的牌子，价格大于2000元的手机。在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+假设想找出小米和华为的牌子，价格大于2000元的手机。在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
@@ -892,7 +894,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **全文检索**
 
-这功能像搜索引擎那样，如品牌输入“小华”，返回结果带回品牌有“小米”和华为的。在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+这功能像搜索引擎那样，如品牌输入“小华”，返回结果带回品牌有“小米”和华为的。在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
@@ -960,7 +962,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **完全匹配**
 
-在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
@@ -1015,7 +1017,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 ### **高亮查询**
 
-在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
@@ -1113,7 +1115,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 #### **分组查询**
 
-在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search` ，附带JSON体如下：
 
 ```javascript
 {
@@ -1243,7 +1245,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
  
 
-上面返回结果会附带原始数据的。若不想要不附带原始数据的结果，在 Postman 中，向 ES 服务器发 GET请求 ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
+上面返回结果会附带原始数据的。若不想要不附带原始数据的结果，在 Postman 中，向 ES 服务器发 **GET请求** ： `http://127.0.0.1:9200/shopping/_search`，附带JSON体如下：
 
 ```javascript
 {
@@ -1348,8 +1350,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
-
 ### **映射关系**
 
 有了索引库，等于有了数据库中的 database。接下来就需要建索引库(index)中的映射了，类似于数据库(database)中的表结构(table)。创建数据库表需要设置字段名称，类型，长度，约束等；索引库也一样，需要知道这个类型下有哪些字段，每个字段有哪些约束信息，这就叫做映射(mapping)。先创建一个索引：
@@ -1438,8 +1438,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
-
 增加数据
 
 ```javascript
@@ -1451,9 +1449,7 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
-
-返回结果如下：
+返回结果如下：一切正常
 
 ```javascript
 {
@@ -1472,8 +1468,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
-
 查找name含有”小“数据：
 
 ```javascript
@@ -1486,8 +1480,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
  }
 }
 ```
-
- 
 
 返回结果如下：
 
@@ -1524,8 +1516,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
-
 查找sex含有”男“数据：
 
 ```javascript
@@ -1538,8 +1528,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
  }
 }
 ```
-
- 
 
 返回结果如下：
 
@@ -1564,9 +1552,9 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
+找不想要的结果，只因 **创建映射时"sex"的类型为"keyword"** 。
 
-找不想要的结果，只因创建映射时"sex"的类型为"keyword"。"sex"只能完全为”男的“，才能得出原数据。
+"sex"只能**完全**为”男的“，才能得出原数据。
 
 ```javascript
 #GET http://127.0.0.1:9200/user/_search
@@ -1578,8 +1566,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
  }
 }
 ```
-
- 
 
 返回结果如下：
 
@@ -1616,8 +1602,6 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
-
 查询电话
 
 ```javascript
@@ -1625,13 +1609,11 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 {
  "query":{
   "match":{
-   "tel":"11"
+   "tel":"1111"
   }
  }
 }
 ```
-
- 
 
 返回结果如下：
 
@@ -1674,4 +1656,4 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
  
 
-报错只因创建映射时"tel"的"index"为false。
+报错只因创建映射时"tel"的"index"为false，所以不能被支持查询。
