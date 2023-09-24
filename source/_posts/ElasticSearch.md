@@ -1661,4 +1661,4 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 ```
 
 
-> 报错是因创建映射时"tel"的"index"为false，所以不能被支持查询。
+> 报错是因创建映射时"tel"的"index"为false,所以不能被支持查询。
