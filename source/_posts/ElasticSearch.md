@@ -4,20 +4,26 @@ date: 2023-09-02 21:54:41
 author: 橙子草
 tags:
 - ElasticSearch
+- 微服务
 category:
 - 后端
 top_img: https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 cover: https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 ---
 
+> 笔记参考[ElasticSearch教程入门到精通](https://www.bilibili.com/video/BV1hh411D7sb?p=17&vd_source=de6e3fd84bab0d52350357a7ac19860b)的前17p所书写
 
-在[官网](https://elasticsearch.cn/download/)下载自己所需要的版本,找到bat以管理员启动即可
+> 对应的代码仓库[ElasticSearch_Project](https://github.com/Chinzicam/ElasticSearch_Project)
+
+在[官网](https://elasticsearch.cn/download/)下载自己所需要的版本,找到bat文件以管理员启动即可
 
 
 
 **ES概括**
 
 Elaticsearch，简称为 ES， ES 是一个开源的高扩展的分布式全文搜索引擎，Elasticsearch 是面向文档型[数据库](https://cloud.tencent.com/solution/database?from_column=20065&from=20065)，一条数据在这里就是一个文档。
+
+{% asset_img image-20210720194230265.png %}
 
 ## **基本要素**
 
@@ -1654,6 +1660,5 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 }
 ```
 
- 
 
-报错只因创建映射时"tel"的"index"为false，所以不能被支持查询。
+> 报错是因创建映射时"tel"的"index"为false，所以不能被支持查询。
