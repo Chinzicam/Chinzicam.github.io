@@ -703,7 +703,7 @@ canvas_nest:
 # Typewriter Effect (打字效果)
 # https://github.com/disjukr/activate-power-mode
 activate_power_mode:
-  enable: false
+  enable: true
   colorful: true # open particle animation (冒光特效)
   shake: false #  open shake (抖动特效)
   mobile: false
@@ -740,7 +740,6 @@ ClickShowText:
     - include 包含
     - exclude 排除
     - modify 修改
-    - Simple 简单的
     - Mapping 映射
     - default 默认的
     - privilege 权限
@@ -766,8 +765,6 @@ ClickShowText:
     - dynamic 动态
     - condition 条件
     - collection 集合
-    - array 数组
-    - item 项目
     - separator 分隔符
     - dialect 方言
     - orders 订单
@@ -797,10 +794,7 @@ ClickShowText:
     - embed 内嵌
     - state 状态
     - denied 拒绝
-    - command 命令
-    - line 行
     - arguments 参数
-    - OS 操作系统
     - variables 变量
     - environment 环境
     - bak 备份
@@ -843,7 +837,6 @@ ClickShowText:
     - transient 临时
     - authority 权限
     - auth 权限
-    - common 通用的
     - consistency 一致性
     - distribuion 分布式
     - invoke 调用
@@ -851,19 +844,14 @@ ClickShowText:
     - serialization 序列化
     - deserialization 反序列化
     - buffer 缓冲区
-    - register 注册
     - ephemeral 临时的
-    - exception 异常
     - synchronized 同步锁
     - delegate 委托
-    - record 记录
     - timestamp 时间戳
     - notify 通知
     - Runable 可运行的
     - Throwable 可抛出的
     - distro 发行版
-    - member 成员
-    - design 设计
     - execute 执行
     - process 处理
     - heartbeat 心跳
@@ -876,15 +864,11 @@ ClickShowText:
     - chain 链
     - flow 流量
     - statistic 统计
-    - filter 过滤
     - translation 转换，翻译
     - interceptor 拦截器
-    - provide 提供
     - authentication 验证
-    - memory 内存
     - detail 细节
     - anonymous 匿名
-    - avatar 头像
     - remark 备注
     - expire 过期
     - suffix 后缀

@@ -11,7 +11,7 @@ top_img: https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 cover: https://pic.imgdb.cn/item/64f4929c661c6c8e54191658.webp
 ---
 
-> 笔记参考[ElasticSearch教程入门到精通](https://www.bilibili.com/video/BV1hh411D7sb?p=17&vd_source=de6e3fd84bab0d52350357a7ac19860b)的前17p所书写
+> 笔记前三节参考[ElasticSearch教程入门到精通](https://www.bilibili.com/video/BV1hh411D7sb?p=17&vd_source=de6e3fd84bab0d52350357a7ac19860b)的前17p所书写，后续内容则是参考[此视频](https://www.bilibili.com/video/BV1LQ4y127n4)所编写
 
 > 对应的代码仓库[ElasticSearch_Project](https://github.com/Chinzicam/ElasticSearch_Project)
 
@@ -1662,3 +1662,296 @@ yellow open   shopping J0WlEhh4R7aDrfIc3AkwWQ   1   1          0            0   
 
 
 > 报错是因创建映射时"tel"的"index"为false,所以不能被支持查询。
+
+## RestClient操作
+
+### 起手准备
+
+为了与索引库操作分离，我们再添加一个测试类，做两件事
+
+1. 初始化RestHighLevelClient
+2. 我们的酒店数据在数据库，需要利用IHotelService去查询，所以要注入这个接口
+
+```java
+import cn.blog.hotel.service.IHotelService;
+import org.apache.http.HttpHost;
+import org.elasticsearch.client.RestClient;
+import org.elasticsearch.client.RestHighLevelClient;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import java.io.IOException;
+
+@SpringBootTest
+public class HotelDocumentTest {
+
+    @Autowired
+    private IHotelService hotelService;
+    private RestHighLevelClient client;
+
+
+    @BeforeEach
+    void setUp() {
+        client = new RestHighLevelClient(RestClient.builder(
+                new  HttpHost.create("http://127.0.0.1:9200")
+        ));
+    }
+
+    @AfterEach
+    void tearDown() throws IOException {
+        client.close();
+    }
+}
+```
+
+### 索引库实体类
+
+- 数据库查询后的结果是一个Hotel类型的对象，结构如下
+
+  ```JAVA
+  @Data
+  @TableName("tb_hotel")
+  public class Hotel {
+      @TableId(type = IdType.INPUT)
+      private Long id;
+      private String name;
+      private String address;
+      private Integer price;
+      private Integer score;
+      private String brand;
+      private String city;
+      private String starName;
+      private String business;
+      private String longitude;
+      private String latitude;
+      private String pic;
+  }
+  ```
+
+- 但是与我们的索引库结构存在差异
+
+  - longitude和latitude需要合并为location
+
+- 因此我们需要定义一个新类型，与索引库结构吻合
+
+  ```JAVA
+  import lombok.Data;
+  import lombok.NoArgsConstructor;
+  
+  @Data
+  @NoArgsConstructor
+  public class HotelDoc {
+      private Long id;
+      private String name;
+      private String address;
+      private Integer price;
+      private Integer score;
+      private String brand;
+      private String city;
+      private String starName;
+      private String business;
+      private String location;
+      private String pic;
+  
+      public HotelDoc(Hotel hotel) {
+          this.id = hotel.getId();
+          this.name = hotel.getName();
+          this.address = hotel.getAddress();
+          this.price = hotel.getPrice();
+          this.score = hotel.getScore();
+          this.brand = hotel.getBrand();
+          this.city = hotel.getCity();
+          this.starName = hotel.getStarName();
+          this.business = hotel.getBusiness();
+          this.location = hotel.getLatitude() + ", " + hotel.getLongitude();
+          this.pic = hotel.getPic();
+      }
+  }
+  ```
+
+### 新增文档
+
+我们要把数据库中的酒店数据查询出来，写入ES中
+
+> 新增文档的DSL语法如下
+
+```json
+POST /{索引库名}/_doc/{id}
+{
+    "name": "Jack",
+    "age": 21
+}
+```
+
+- 我们导入酒店数据，基本流程一致，但是需要考虑几点变化
+  1. 酒店数据来自于数据库，我们需要先从数据库中查询，得到`Hotel`对象
+  2. `Hotel`对象需要转换为`HotelDoc`对象
+  3. `HotelDoc`需要序列化为`json`格式
+- 因此，代码整体步骤如下
+  1. 根据id查询酒店数据Hotel
+  2. 将Hotel封装为HotelDoc
+  3. 将HotelDoc序列化为Json
+  4. 创建IndexRequest，指定索引库名和id
+  5. 准备请求参数，也就是Json文档
+  6. 发送请求
+- 在hotel-demo的HotelDocumentTest测试类中，编写单元测试
+
+```java
+@Test
+void testAddDocument() throws IOException {
+    // 1.查询数据库hotel数据
+    Hotel hotel = hotelService.getById(61083L);
+    // 2.转换为HotelDoc
+    HotelDoc hotelDoc = new HotelDoc(hotel);
+    // 3.转JSON
+    String json = JSON.toJSONString(hotelDoc);
+
+    // 1.准备Request
+    IndexRequest request = new IndexRequest("hotel").id(hotelDoc.getId().toString());
+    // 2.准备请求参数DSL，其实就是文档的JSON字符串
+    request.source(json, XContentType.JSON);
+    // 3.发送请求
+    client.index(request, RequestOptions.DEFAULT);
+}
+```
+
+### 查询文档
+
+>  查询的DSL语句如下
+
+```JSON
+GET /hotel/_doc/{id}
+```
+
+- 由于没有请求参数，所以非常简单，代码分为以下两步
+  1. 准备Request对象
+  2. 发送请求
+  3. 解析结果
+- 不过查询的目的是为了得到HotelDoc，因此难点是结果的解析，在刚刚查询的结果中，我们发现HotelDoc对象的主要内容在`_source`属性中，所以我们要获取这部分内容，然后将其转化为HotelDoc
+
+```java
+@Test
+void testGetDocumentById() throws IOException {
+    // 1.准备Request      // GET /hotel/_doc/{id}
+    GetRequest request = new GetRequest("hotel", "61083");
+    // 2.发送请求
+    GetResponse response = client.get(request, RequestOptions.DEFAULT);
+    // 3.解析响应结果
+    String json = response.getSourceAsString();
+
+    HotelDoc hotelDoc = JSON.parseObject(json, HotelDoc.class);
+    System.out.println("hotelDoc = " + hotelDoc);
+}
+```
+
+### 修改文档
+
+- 修改依旧是两种方式
+
+  1. 全量修改：本质是先根据id删除，再新增
+  2. 增量修改：修改文档中的指定字段值
+
+- 在RestClient的API中，全量修改与新增的API完全一致，判断的依据是ID
+
+  - 若新增时，ID已经存在，则修改(删除再新增)
+  - 若新增时，ID不存在，则新增
+
+- 这里就主要讲增量修改，对应的DSL语句如下
+
+  ```JSON
+  POST /test001/_update/1
+  {
+    "doc":{
+      "price", "870"
+    }
+  }
+  ```
+
+- 与之前类似，也是分为三步
+
+  1. 准备Request对象，这次是修改，对应的就是UpdateRequest
+  2. 准备参数，也就是对应的JSON文档，里面包含要修改的字段
+  3. 发送请求，更新文档
+
+```java
+@Test
+void testUpdateById() throws IOException {
+    // 1.准备Request
+    UpdateRequest request = new UpdateRequest("hotel", "61083");
+    // 2.准备参数
+    request.doc(
+        "price", "870"
+    );
+    // 3.发送请求
+    client.update(request, RequestOptions.DEFAULT);
+}
+```
+
+### 删除文档
+
+- 删除的DSL语句如下
+
+  ```JSON
+  DELETE /hotel/_doc/{id}
+  ```
+
+- 与查询相比，仅仅是请求方式由DELETE变为GET，不难猜想对应的Java依旧是三步走
+
+  1. 准备Request对象，因为是删除，所以是DeleteRequest对象，要指明索引库名和id
+  2. 准备参数，无参
+  3. 发送请求，因为是删除，所以是client.delete()方法
+
+```java
+@Test
+void testDeleteDocumentById() throws IOException {
+    // 1.准备Request      // DELETE /hotel/_doc/{id}
+    DeleteRequest request = new DeleteRequest("hotel", "61083");
+    // 2.发送请求
+    client.delete(request, RequestOptions.DEFAULT);
+}
+```
+
+- 成功删除之后，再调用查询的测试方法，返回值为null，删除成功
+
+### 批量导入文档
+
+- 实际应用中，还是需要批量的将数据库数据导入索引库中
+
+```java
+    /**
+     * 批量新增文档
+     *
+     * @throws IOException
+     */
+    @Test
+    void testBulkRequest() throws IOException {
+        // 查询所有的酒店数据
+        List<Hotel> list = hotelService.list();
+
+        // 1.准备Request
+        BulkRequest request = new BulkRequest();
+        // 2.准备参数
+        for (Hotel hotel : list) {
+            // 2.1.转为HotelDoc
+            HotelDoc hotelDoc = new HotelDoc(hotel);
+            // 2.2.转json
+            String json = JSON.toJSONString(hotelDoc);
+            // 2.3.添加请求
+            request.add(new IndexRequest("hotel").id(hotel.getId().toString()).source(json, XContentType.JSON));
+        }
+
+        // 3.发送请求
+        client.bulk(request, RequestOptions.DEFAULT);
+    }
+```
+
+### 小结
+
+- 文档初始化的基本步骤
+  1. 初始化RestHighLevelClient
+  2. 创建XxxRequest对象，Xxx是Index、Get、Update、Delete
+  3. 准备参数(Index和Update时需要)
+  4. 发送请求，调用RestHighLevelClient.xxx方法，xxx是index、get、update、delete
+  5. 解析结果(Get时需要)
