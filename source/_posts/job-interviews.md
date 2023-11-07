@@ -10,7 +10,7 @@ top_img: https://pic.imgdb.cn/item/64f49295661c6c8e541915d8.webp
 cover: https://pic.imgdb.cn/item/64f49295661c6c8e541915d8.webp
 ---
 
-## 记录一下常见面试题
+## 常见面试题
 
 ### Java
 
