@@ -72,7 +72,7 @@ ps -ef | grep ssh
 sudo apt update
 ```
 
-分别安装maven和Java8的jdk，同时查看一下版本来检验是否安装成功
+分别安装maven和Java8的jdk，同时查看一下版本，来检验是否安装成功
 
 ```bash
 sudo apt install maven
