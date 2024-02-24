@@ -15,7 +15,7 @@ cover: https://pic.imgdb.cn/item/64e453d6661c6c8e54ae04b5.jpg
 https://paperen.com/post/docker-net-settings;
 https://www.cnblogs.com/shawhe/p/11209678.html;
 
-在VMWare中创建了一个Ubuntu20.04虚拟机，重新复习一下docker命令，随便搞个nginx镜像玩一玩，但是出现了标题所说的问题。
+在VMWare中创建了一个Ubuntu20.04虚拟机，重新复习一下docker命令，随便搞个nginx镜像玩玩，但是出现了标题所说的问题。
 
 ### 复现步骤：
 
