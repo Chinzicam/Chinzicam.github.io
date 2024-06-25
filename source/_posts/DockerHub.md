@@ -6,8 +6,8 @@ tags:
 - Docker
 categories: 
 - 教程
-top_img: https://pic.imgdb.cn/item/64d88a7d1ddac507ccaa08bf.webp
-cover: https://pic.imgdb.cn/item/64d88a7d1ddac507ccaa08bf.webp
+top_img: https://pic.imgdb.cn/item/64e042c7661c6c8e5438a700.jpg
+cover: https://pic.imgdb.cn/item/64e042c7661c6c8e5438a700.jpg
 ---
 
 ##  Docker Hub 镜像加速
