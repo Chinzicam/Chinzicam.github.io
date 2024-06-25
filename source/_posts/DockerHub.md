@@ -12,7 +12,7 @@ cover: https://pic.imgdb.cn/item/64d88a7d1ddac507ccaa08bf.webp
 
 ##  Docker Hub 镜像加速
 
-> 前景提要：[解决Docker镜像无法拉取问题 | 牛马知识 (aabcc.top)](https://www.aabcc.top/archives/m7NPfx1D)，下面是我给出方法，相对来说比较简单。
+> 前景提要：[解决Docker镜像无法拉取问题 | 牛马知识 (aabcc.top)](https://www.aabcc.top/archives/m7NPfx1D)，下面是我给出的方法，相对来说比较简单。
 
 - 以下镜像站来源于互联网，可能出现宕机、转内网、关停等情况，建议同时配置多个镜像源。
 
@@ -25,7 +25,7 @@ cover: https://pic.imgdb.cn/item/64d88a7d1ddac507ccaa08bf.webp
 
 - 使用阿里云镜像进行配置时，需要登录获取。
 
-{% asset_img image-20240625111035514.png %}
+{% asset_img 1.png %}
 
 之后执行以下操作
 
@@ -56,8 +56,8 @@ sudo systemctl restart docker
 
 - 配置前:拉取镜像失败,显示连接被拒绝
 
-{% asset_img image-20240625112103143.png %}
+{% asset_img 2.png %}
 
 - 配置后:可成功拉取镜像
 
-{% asset_img image-20240625112443438.png %}
+{% asset_img 3.png %}
