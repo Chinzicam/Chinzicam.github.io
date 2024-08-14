@@ -20,7 +20,7 @@ cover: https://pic.imgdb.cn/item/64e042c7661c6c8e5438a700.jpg
 
 | 镜像                                                         | 镜像加速地址                              | 说明            | 其它加速                    |
 | ------------------------------------------------------------ | ----------------------------------------- | --------------- | --------------------------- |
-| [网友](https://gitee.com/link?target=https%3A%2F%2Fdo.nark.eu.org) | `https://do.nark.eu.org`                  |                 | Docker Hub                  |
+| [网友](https://gitee.com/link?target=https%3A%2F%2Fdo.nark.eu.org) | `https://do.nark.eu.org`                  | 随时可能失效    | Docker Hub                  |
 | [阿里云](https://gitee.com/link?target=https%3A%2F%2Fcr.console.aliyun.com%2F) | `https://<your_code>.mirror.aliyuncs.com` | 需登录 系统分配 | Docker Hub 未同步最新源镜像 |
 
 - 使用阿里云镜像进行配置时，需要登录获取。
