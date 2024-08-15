@@ -18,7 +18,7 @@ cover: https://pic.imgdb.cn/item/64db67d3661c6c8e545b2aa8.jpg
 1. 安装哪个软件包可以打开服务器的22端口实现远程连接?
 
 ```sh
-opensever-ssh
+openssh-sever
 ```
 
 2. 用什么命令查看cpu信息？
@@ -121,7 +121,7 @@ pwd
 3. 在myTest文件夹中创建五个demo1、demo2、demo3、demo4、demo5的文件。
 
  ```sh
- touch demo1.txt demo2.txt demo3.txt demo4.txt demo5.txt
+ touch demo1 demo2 demo3 demo4 demo5
  ```
 
 4. 编辑demo1文件并写入hello world!。
@@ -329,13 +329,13 @@ adb shell rm 上面获取的包路径
 adb pull /data/rk3288/log/ D:/
 ```
 
-4.	替换终端appServer，并对比前后的MD5值确认已经替换（提示：记得先查看原来的MD5值，appServer文件所在路径/data/rk3288/log/）
+4.	替换终端appServer，并对比前后的MD5值确认已经替换（提示：记得先查看原来的MD5值，appServer文件所在路径/vendor/bin）
 
 ```bash
-adb shell md5sum /data/rk3288/log/appServer
+adb shell md5sum /vendor/bin/appServer
 adb root
-adb push 本地appServer路径 /data/rk3288/log/appServer
-adb shell md5sum /data/rk3288/log/appServer
+adb push 本地appServer路径 /vendor/bin/appServer
+adb shell md5sum /vendor/bin/appServer
 ```
 
 
