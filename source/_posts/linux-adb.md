@@ -151,7 +151,7 @@ pwd
 8. 删除home目录下的myTest文件夹（使用绝对路径删除）。
 
  ```sh
- rm -r myTest
+ rm -r /home/myTest
  ```
 
 9. 将myTest中的5个文件重命名为testdemo1,testdemo2,testdemo3,testdemo4,testdemo5并且移动到rootTest2中。
