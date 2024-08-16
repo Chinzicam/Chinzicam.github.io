@@ -18,7 +18,7 @@ cover: https://pic.imgdb.cn/item/64db67d3661c6c8e545b2aa8.jpg
 1. 安装哪个软件包可以打开服务器的22端口实现远程连接?
 
 ```sh
-openssh-sever
+openssh-server
 ```
 
 2. 用什么命令查看cpu信息？
@@ -99,8 +99,8 @@ pwd
 14. 4.0平台重启docker中相关服务的命令，按docker2.0版本的命令来书写。
 
  ```sh
- docker-compose restart
- docker compose restart
+ docker-compose restart  旧
+ docker compose restart  新
  ```
 
 **二、具体应用习题**
@@ -294,7 +294,7 @@ ps -ef | grep NTO1
 15. 查看当前终端某个服务的即时日志命令？（只需要写出命令即可，不用加具体服务名）。
 
 ```bash
-logcats -s + 服务名
+logcat -s + 服务名
 ```
 
 
@@ -317,7 +317,7 @@ adb install -r -d  本地apk路径
 
 ```bash
 adb root
-adb pm list package
+adb shell pm list package
 adb shell pm path com.ruihe.M10
 adb shell rm 上面获取的包路径
 ```
