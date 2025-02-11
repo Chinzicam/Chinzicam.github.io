@@ -91,7 +91,7 @@ pwd
 13. 查看docker版本、运行中的容器、mongodb服务日志等命令？
 
  ```sh
- docker -version
+ docker --version
  docker ps
  docker logs mongodb
  ```
@@ -182,14 +182,14 @@ for i in {1..5} do mv demo$i testdemo$i done
 
  ```sh
  zip /root/rootTest1.zip /root/rootTest1
- tar -czvf /root/rootTest1.tar.gz /root/rootTest1
+ tar -zcvf /root/rootTest1.tar.gz /root/rootTest1
  ```
 
 12. 将前面打包的文件分别解压。
 
  ```sh
  unzip /root/rootTest1.zip
- tar -xzvf /root/rootTest1.tar.gz
+ tar -zxvf /root/rootTest1.tar.gz
  ```
 
 13. 上传一个文件到ubuntu系统桌面上，可以使用任意方法。
@@ -326,7 +326,7 @@ adb shell rm 上面获取的包路径
 3.	导出终端appServer日志目录下的某个文件（提示：appServer日志所在路径/data/rk3288/log/）
 
 ```bash
-adb pull /data/rk3288/log/ D:/
+adb pull /data/rk3288/log/appServer D:/
 ```
 
 4.	替换终端appServer，并对比前后的MD5值确认已经替换（提示：记得先查看原来的MD5值，appServer文件所在路径/vendor/bin）
