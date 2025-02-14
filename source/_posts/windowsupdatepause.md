@@ -7,7 +7,7 @@ tags:
 category:
 - 教程
 top_img: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
-cover: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
+cover: https://pic.imgdb.cn/item/64dc65cd661c6c8e548aae6a.jpg
 ---
 
 # win10 11系统更新 暂停100年
@@ -34,7 +34,7 @@ cover: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
 
 步骤六：
 
-> 选择日期，用鼠标拖动滚动条，可看到最长可暂停更新到2133年10月
+> 选择日期，用鼠标拖动滚动条，可看到最长可暂停许多周之后
 
 步骤七：
 
