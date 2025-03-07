@@ -1,5 +1,5 @@
 ---
-title:  win10 11系统暂停更新
+title:  Winwdows暂停系统更新
 date: 2024-12-13 19:52:18
 author: 橙子草
 tags:
@@ -10,7 +10,7 @@ top_img: https://pic.imgdb.cn/item/64d8f4c31ddac507cca353d6.png
 cover: https://pic.imgdb.cn/item/64dc65cd661c6c8e548aae6a.jpg
 ---
 
-# win10 11系统更新 暂停100年
+# Winwdows暂停系统更新
 
 步骤一：
 
